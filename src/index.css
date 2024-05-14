@@ -13,12 +13,14 @@
 
 /* dark mode user-agent-styles */
 html {
-  color-scheme: dark light;
+  /* color-scheme: dark light; */
 }
 
 /* min body height */
 body {
   min-height: 80vh;
+  background-color: rgb(241, 236, 236);
+
 }
 
 /* responsive images/videos */

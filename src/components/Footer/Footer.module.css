@@ -1,0 +1,12 @@
+.container {
+    /* border: 1px solid red; */
+    padding: 3rem 2rem 3rem 2rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.container li {
+
+}

@@ -1,18 +1,20 @@
 import { NavLink } from 'react-router-dom';
 import styles from './Navigation.module.css';
 
-export const Navigation = () => {
+export const Navigation = ({
+  logoIcon,
+}) => {
 
     return (
         <nav className={styles['nav']}>
           <div className={styles['logo-container']}>
-            <i>ICON </i>
-            <span><NavLink to="/">Healthy Piggie</NavLink></span>
+            <i className={styles["logo-icon"]}>{logoIcon}</i>
+            <span className={styles["logo-title"]}><NavLink to="/">Healthy Piggie</NavLink></span>
           </div>
           <ul className={styles["nav-items-container"]}>
-            <li className={styles["nav-item"]}><NavLink to="/pop-edible">Most popular foods</NavLink></li>
-            <li className={styles["nav-item"]}><NavLink to="/pop-toxic">Popular toxic foods</NavLink></li>
-            <li className={styles["nav-item"]}><NavLink to="/combos">Food combinations</NavLink></li>
+            <li className={styles["nav-item"]}><NavLink to="/pop-edible">Edible foods</NavLink></li>
+            <li className={styles["nav-item"]}><NavLink to="/pop-toxic">Toxic foods</NavLink></li>
+            <li className={styles["nav-item"]}><NavLink to="/combos">Food combos</NavLink></li>
           </ul>
         </nav>
     )
