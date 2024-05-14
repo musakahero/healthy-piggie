@@ -1,0 +1,15 @@
+.nav {
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5rem 2rem 0 2rem;
+}
+
+.nav-items-container {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
