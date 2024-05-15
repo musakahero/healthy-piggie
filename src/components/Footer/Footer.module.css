@@ -5,8 +5,6 @@
     display: flex;
     justify-content: space-around;
     gap: 2rem;
-}
-
-.container li {
-
+    margin-top: auto;
+    width: 100%;
 }
