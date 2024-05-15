@@ -1,49 +1,8 @@
 /* Intro section */
 .intro {
-    text-align:justify;
+    text-align:center;
     font-size: 1.8rem;
-    padding: 3rem 5rem 3rem 5rem;
-}
-
-/* Search bar section */
-.search {
-    padding: 3rem 2rem 3rem 2rem;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem; 
-}
-
-.search .input, 
-.search .weight, 
-.search .search-btn {
-    background-color: whitesmoke;
-    border-radius: 8px;
-}
-
-.search .input {
-    padding: 0 1rem 0 1rem;
-    border: 1px solid;
-}
-
-.search .weight {
-    padding: 0 0.5rem 0 0.5rem;
-    border: 1px solid black;
-    cursor: pointer;
-
-}
-
-.search .search-btn {
-    border: 1px solid;
-    padding: 0 1rem 0 1rem;
-    cursor: pointer;
-}
-
-.search .search-btn:active{
-    background-color: grey;
-    border: 1px solid black;
-    color: whitesmoke;
-    user-select: none;
+    padding: 3rem 5rem 0rem 5rem;
 }
 
 /* Most searched foods section */

@@ -1,32 +1,44 @@
+import { useEffect, useState } from 'react';
 import { Results } from '../Results/Results';
 import styles from './Home.module.css';
-export const Home = ({props}) => {
+import * as veggiesService from '../../services/veggiesService';
+import { useSearch } from '../../hooks/useSearch';
+import { Search } from '../Search/Search';
+export const Home = ({ props }) => {
+
+    const [allVeggies, setAllVeggies] = useState([]);
+
+    // Fetch all veggies
+    useEffect(() => {
+        veggiesService.getAll()
+            .then(result => {
+                setAllVeggies(result);
+            })
+            .catch(err => alert(err));
+    }, []);
+
+    // Search functionality
+    const { foundItems, onSearchHandler, onChangeHandler, changeInputValue, inputValue } = useSearch(allVeggies, '');
+
     return (
         <>
-        {/* Introductory paragraph */}
-            <p className={styles.intro}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus voluptates fuga obcaecati voluptatibus itaque omnis, natus eaque? Est laudantium sequi consequuntur fugiat itaque eos dignissimos minus ipsum quis suscipit?</p>
-
-            {/* Search bar */}
-            <div className={styles.search}>
-                <input className={styles.input} type="text" />
-                <select className={styles.weight} name="weight">
-                    <option value="0.5">0.5</option>
-                    <option value="1.5">1.5</option>
-                    <option value="2.5">2.5</option>
-                    <option value="3.5">3.5</option>
-                    <option value="4.5">4.5</option>
-                </select>
-                <i className={styles["search-btn"]}>Go</i>
-            </div>
-
+            {/* Introductory paragraph */}
+            <p className={styles.intro}>You're about to feed your piggie with a special treat? Check here if it's a good idea!</p>
+            <Search
+                allVeggies={allVeggies}
+                onSearchHandler={onSearchHandler}
+                onChangeHandler={onChangeHandler}
+                changeInputValue={changeInputValue}
+                inputValue={inputValue}
+                foundItems={foundItems} />
             {/* Results section */}
             <section className={styles.results}>
-                <Results />
+                {foundItems.length === 1 ? <Results foundVeggie={foundItems[0]} /> : null}
             </section>
             {/* Most popular searches section */}
             <section className={styles["pop-questions"]}>
                 <h2>Most popular searches:</h2>
-                <ul> 
+                <ul>
                     <li>Can my piggie eat cucumber?</li>
                     <li>Can my piggie eat onions?</li>
                     <li>Can my piggie eat nuts?</li>

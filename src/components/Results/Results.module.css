@@ -1,0 +1,11 @@
+.container {
+    border: 1px dotted grey;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    font-size: 1.4rem;
+    padding: 2rem 2rem;
+    text-align: start;
+    grid-template-areas: 'noAnswer noAnswer';
+}
