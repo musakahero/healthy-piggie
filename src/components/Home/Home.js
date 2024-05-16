@@ -33,7 +33,8 @@ export const Home = ({ props }) => {
                 foundItems={foundItems} />
             {/* Results section */}
             <section className={styles.results}>
-                {foundItems.length === 1 ? <Results foundVeggie={foundItems[0]} /> : null}
+                {foundItems.length === 1 
+                && inputValue === foundItems[0].veggieName ? <Results foundVeggie={foundItems[0]} /> : null}
             </section>
             {/* Most popular searches section */}
             <section className={styles["pop-questions"]}>

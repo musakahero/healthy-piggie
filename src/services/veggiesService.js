@@ -8,4 +8,18 @@ export const getAll = async () => {
     return result.items;
 };
 
+// update search counter
+export const edit = async (recordId, data) => {
+    const result = await request.patch(`${baseUrl}/${recordId}`, data);
+    return result;
+};
 
+// export const create = async (data) => {
+//     const result = await request.post(baseUrl, data);
+//     return result;
+// };
+
+export const deleteItem = async (recordId) => {
+    const result = await request.del(`${baseUrl}/${recordId}`, {});
+    return result;
+};

@@ -1,6 +1,16 @@
+import { useEffect } from 'react'
 import styles from './Results.module.css'
+import * as veggieService from '../../services/veggiesService';
 
 export const Results = ({foundVeggie}) => {
+
+    // useEffect(() => {
+    //     let currentVisits = foundVeggie.searchCount;
+    //     let newVisits = currentVisits + 1;
+    //     veggieService.edit(foundVeggie.id, {"searchCount": newVisits})
+    //     .then(result => console.log(result))
+    //     .catch(err => alert(err));
+    // }, [])
 
     // const sampleVeggie = {
     //     veggieName: 'tomato',

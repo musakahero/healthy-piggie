@@ -1,7 +1,7 @@
 import { useSearch } from '../../hooks/useSearch';
-import styles from './Search.module.css'; 
+import styles from './Search.module.css';
 
-export const Search = ({allVeggies, onSearchHandler, onChangeHandler, changeInputValue, inputValue, foundItems}) => {
+export const Search = ({ onSearchHandler, onChangeHandler, changeInputValue, inputValue, foundItems }) => {
 
     // autocomplete
     const optionClickHandler = (e) => {
@@ -11,7 +11,7 @@ export const Search = ({allVeggies, onSearchHandler, onChangeHandler, changeInpu
 
     return (
         // {/* Search bar */ }
-        < div className={styles.search} >
+        <div className={styles.search}>
             <form onSubmit={onSearchHandler} className={styles['search-form']}>
                 <label htmlFor="search" className={styles["input-label"]} >Can my guinea pig eat...</label>
                 <div className={styles["input-container"]}>
