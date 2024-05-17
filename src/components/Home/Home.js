@@ -4,9 +4,16 @@ import styles from './Home.module.css';
 import * as veggiesService from '../../services/veggiesService';
 import { useSearch } from '../../hooks/useSearch';
 import { Search } from '../Search/Search';
-export const Home = ({ props }) => {
+import { PopSearches } from '../PopSearches/PopSearches';
 
+export const Home = (props) => {
     const [allVeggies, setAllVeggies] = useState([]);
+
+    //Search functionality (useSearch custom hook)
+    const { options,
+        resultItem,
+        setCurrentlySelected,
+        currentlySelected } = useSearch(allVeggies);
 
     // Fetch all veggies
     useEffect(() => {
@@ -17,33 +24,30 @@ export const Home = ({ props }) => {
             .catch(err => alert(err));
     }, []);
 
-    // Search functionality
-    const { foundItems, onSearchHandler, onChangeHandler, changeInputValue, inputValue } = useSearch(allVeggies, '');
-
     return (
         <>
             {/* Introductory paragraph */}
             <p className={styles.intro}>You're about to feed your piggie with a special treat? Check here if it's a good idea!</p>
+
             <Search
-                allVeggies={allVeggies}
-                onSearchHandler={onSearchHandler}
-                onChangeHandler={onChangeHandler}
-                changeInputValue={changeInputValue}
-                inputValue={inputValue}
-                foundItems={foundItems} />
-            {/* Results section */}
+                setCurrentlySelected={setCurrentlySelected}
+                options={options}
+                currentlySelected={currentlySelected} />
+
+
+            {/* Results section v2 */}
             <section className={styles.results}>
-                {foundItems.length === 1 
-                && inputValue === foundItems[0].veggieName ? <Results foundVeggie={foundItems[0]} /> : null}
+                {/* Show results section only if foundItem is not falsey */}
+                {resultItem ?
+                    <Results
+                        resultItem={resultItem} />
+                    : null}
             </section>
             {/* Most popular searches section */}
             <section className={styles["pop-questions"]}>
-                <h2>Most popular searches:</h2>
-                <ul>
-                    <li>Can my piggie eat cucumber?</li>
-                    <li>Can my piggie eat onions?</li>
-                    <li>Can my piggie eat nuts?</li>
-                </ul>
+                <PopSearches allVeggies={allVeggies}
+                    setCurrentlySelected={setCurrentlySelected}
+                />
             </section>
         </>
     )

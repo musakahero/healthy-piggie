@@ -8,6 +8,12 @@ export const getAll = async () => {
     return result.items;
 };
 
+//Get one veggie item from DB
+export const getOne = async (recordId) => {
+    const result = await request.get(`${baseUrl}/${recordId}`);
+    return result;
+}
+
 // update search counter
 export const edit = async (recordId, data) => {
     const result = await request.patch(`${baseUrl}/${recordId}`, data);
