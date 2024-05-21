@@ -13,9 +13,8 @@ export const useSearch = (array) => {
                 .then(res => {
                     // update the searchCount in DB for the specific item
                     oldCount = res.searchCount;
-                    console.log(`oldCount is ${oldCount}`);
+                    // console.log(`oldCount is ${oldCount}`);
                     veggieService.edit(currentlySelected.id, { searchCount: oldCount + 1 })
-                        .then(res => console.log(`updated searchCount to ${res.searchCount}`))
                         .catch(err => alert(err));
                     // set resultItem to pass on to Results component
                     setResultItem(res);

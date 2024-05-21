@@ -1,11 +1,25 @@
 .container {
+    margin: auto;
+    max-width: 60vw;
     border: 1px dotted grey;
     border-radius: 8px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     font-size: 1.4rem;
-    padding: 2rem 2rem;
+    padding: 2rem 4rem;
     text-align: start;
     grid-template-areas: 'noAnswer noAnswer';
+    background-color: #87A922;
+    color: #F7F6BB;
+}
+
+.container h3 {
+    color: #FCDC2A;
+    font-weight: bold;
+    font-style:italic;
+}
+
+.container .veggieName {
+    color: #F7F6BB;
 }

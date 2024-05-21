@@ -20,28 +20,28 @@ export const Home = (props) => {
         veggiesService.getAll()
             .then(result => {
                 setAllVeggies(result);
+
             })
             .catch(err => alert(err));
     }, []);
+
 
     return (
         <>
             {/* Introductory paragraph */}
             <p className={styles.intro}>You're about to feed your piggie with a special treat? Check here if it's a good idea!</p>
 
+            {/* Search component */}
             <Search
                 setCurrentlySelected={setCurrentlySelected}
                 options={options}
                 currentlySelected={currentlySelected} />
 
 
-            {/* Results section v2 */}
+            {/* Results section */}
             <section className={styles.results}>
                 {/* Show results section only if foundItem is not falsey */}
-                {resultItem ?
-                    <Results
-                        resultItem={resultItem} />
-                    : null}
+                {resultItem && <Results resultItem={resultItem} />}
             </section>
             {/* Most popular searches section */}
             <section className={styles["pop-questions"]}>

@@ -1,10 +1,11 @@
 .container {
-    padding: 3rem 2rem 0rem 2rem;
+    padding: 3rem 2rem 3rem 2rem;
     font-size: 1.8rem;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    /* background-color: #FCDC2A; */
 
 }

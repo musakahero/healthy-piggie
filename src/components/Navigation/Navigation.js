@@ -15,6 +15,7 @@ export const Navigation = ({
             <li className={styles["nav-item"]}><NavLink to="/pop-edible">Edible foods</NavLink></li>
             <li className={styles["nav-item"]}><NavLink to="/pop-toxic">Toxic foods</NavLink></li>
             <li className={styles["nav-item"]}><NavLink to="/combos">Food combos</NavLink></li>
+            <li className={styles["nav-item"]}><NavLink to="/add">Add</NavLink></li>
           </ul>
         </nav>
     )

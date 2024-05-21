@@ -8,6 +8,7 @@ import { Combos } from './components/Combos/Combos';
 import { Footer } from './components/Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWheatAwnCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { Create } from './components/Create/Create';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/pop-edible" element={<PopEdible />}></Route>
           <Route path="/pop-toxic" element={<PopToxic />}></Route>
           <Route path="/combos" element={<Combos />}></Route>
+          <Route path="/add" element={<Create />}></Route>
         </Routes>
       </main>
       <Footer />

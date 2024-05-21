@@ -20,6 +20,11 @@ export const edit = async (recordId, data) => {
     return result;
 };
 
+export const create = async (data) => {
+    const result = await request.post(baseUrl, data);
+    return result;
+};
+
 // export const create = async (data) => {
 //     const result = await request.post(baseUrl, data);
 //     return result;
