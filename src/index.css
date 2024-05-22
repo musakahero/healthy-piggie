@@ -3,7 +3,19 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
+*::-webkit-scrollbar {
+  border-radius: 8px;
+  
+  background-color: #F7F6BB;
+}
+*::-webkit-scrollbar-thumb{
+  border-radius: 8px;
+  background-color: #114232;
+}
+*::-webkit-scrollbar-thumb:hover{
+  border-radius: 8px;
+  background-color: #87A922 ;
+}
 /* remove default spacing */
 /* force styling of type through styling, rather than elements */
 * {

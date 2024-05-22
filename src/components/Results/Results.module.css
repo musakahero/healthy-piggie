@@ -1,12 +1,18 @@
 /* Shared styles */
 .source {
     font-style: italic;
+    font-weight: 700;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .howMuch {
     text-align: center;
     font-size: 1.7rem;
+}
+
+.container-green, .container-no, .container-red, .container-yellow {
+    align-items: center;
 }
 
 /* Green version */
@@ -141,8 +147,6 @@
     padding: 2rem 4rem;
     background-color: #dd4949;
     color: #F7F6BB;
-    
-    
 }
 
 .container-no h3 {

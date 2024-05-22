@@ -23,23 +23,36 @@ export const Search = ({
     const selectStyles = {
         control: (styles, state) => ({
             ...styles,
+            textAlign: "center",
             backgroundColor: "whitesmoke",
-            minWidth: "13vw",
+            minWidth: "20vw",
             borderRadius: "12px",
             "&:hover": {
                 border: "1px solid #87A922"
             },
             borderColor: `${state.isFocused && "#87A922"}`,
         }),
-        clearIndicator: lightGreenColoredHover,
+        clearIndicator: (styles, state) => ({
+            ...styles, 
+            paddingLeft: "0",
+            color: "#87A922",
+            "&:hover": {
+                color: "#114232"
+            }
+        }),
         dropdownIndicator: lightGreenColoredHover,
-        input: lightGreenColored,
+        input: (styles, state) => ({
+            ...styles, 
+            margin: "auto",
+            color: "#87A922",
+        }),
         menu: (styles, state) => ({
             ...styles, 
             backgroundColor: "whitesmoke",
         }),
         menuList: (styles, state) => ({
             ...styles,
+            textAlign: "center",
             borderRadius: "8px",
             "::-webkit-scrollbar": {
                 borderRadius: "8px",
@@ -53,6 +66,7 @@ export const Search = ({
         }),
         option: (styles, state) => ({
             ...styles, 
+            
             backgroundColor: `${state.isFocused && "#F7F6BB"}`,
             color: "#87A922",
             "&:hover": {
@@ -60,7 +74,8 @@ export const Search = ({
                 color: "#F7F6BB",
             }
         }),
-        singleValue: lightGreenColored,
+        singleValue: lightGreenColored
+        
 
     }
     return (
@@ -73,7 +88,7 @@ export const Search = ({
                 styles={selectStyles}
                 placeholder={'Can my guinea pig eat...'}
                 // filterOption={createFilter({ matchFrom: "any" })}
-                noOptionsMessage={() => `Don't have that one yet :(`}
+                noOptionsMessage={() => `We don't know about that one yet :/`}
                 
             />
         </div>

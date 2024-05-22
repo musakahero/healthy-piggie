@@ -10,9 +10,11 @@
 /* Most searched foods section */
 .pop-questions {
     padding: 3rem 5rem 3rem 5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
     background-color: #ffe65c;
     color: #114232;
+    font-family: Caveat, Arial, Helvetica, sans-serif;
 }
 .pop-questions li {
     list-style-type: circle;
