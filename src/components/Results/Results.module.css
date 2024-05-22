@@ -1,4 +1,16 @@
-.container {
+/* Shared styles */
+.source {
+    font-style: italic;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.howMuch {
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+/* Green version */
+.container-green {
     margin: auto;
     max-width: 60vw;
     border: 1px dotted grey;
@@ -8,18 +20,148 @@
     gap: 2rem;
     font-size: 1.4rem;
     padding: 2rem 4rem;
-    text-align: start;
-    grid-template-areas: 'noAnswer noAnswer';
+    grid-template-areas:
+        '. .'
+        '. .'
+        'howMuch howMuch'
+        '. .'
+        '. .'
+        '. .';
     background-color: #87A922;
     color: #F7F6BB;
 }
 
-.container h3 {
+
+
+.container-green h3 {
     color: #FCDC2A;
     font-weight: bold;
-    font-style:italic;
+    font-style: italic;
 }
 
-.container .veggieName {
+.container-green .source a:hover {
+    color: #114232;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.container-green .veggieName {
     color: #F7F6BB;
+}
+
+/* Yellow version */
+.container-yellow {
+    margin: auto;
+    max-width: 60vw;
+    border: 1px dotted grey;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    font-size: 1.4rem;
+    padding: 2rem 4rem;
+    grid-template-areas:
+        '. .'
+        '. .'
+        'howMuch howMuch'
+        '. .'
+        '. .'
+        '. .';
+    background-color: #ffe65c;
+    color: #114232;
+    
+}
+
+.container-yellow h3 {
+    color: #87A922;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.container-yellow .veggieName {
+    color: #114232;
+}
+
+.container-yellow .source a:hover {
+    color: #87A922;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* Red version */
+.container-red {
+    margin: auto;
+    max-width: 60vw;
+    border: 1px dotted grey;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        '. .'
+        '. .'
+        'howMuch howMuch'
+        '. .';
+    gap: 2rem;
+    font-size: 1.4rem;
+    padding: 2rem 4rem;
+    background-color: #dd4949;
+    color: #F7F6BB;
+}
+
+.container-red h3 {
+    color: #ffe65c;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.container-red .veggieName {
+    color: #F7F6BB;
+}
+
+.container-red .source a:hover {
+    color: #114232;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* No answer version */
+.container-no {
+    margin: auto;
+    max-width: 60vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    '. recoNotes'
+    'sourceSingle sourceSingle';
+    gap: 2rem;
+    border: 1px dotted grey;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    padding: 2rem 4rem;
+    background-color: #dd4949;
+    color: #F7F6BB;
+    
+    
+}
+
+.container-no h3 {
+    color: #ffe65c;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.container-no .source a:hover {
+    color: #114232;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Grid areas*/
+.howMuch {
+    grid-area: howMuch;
+}
+
+.recoNotes {
+    grid-area: recoNotes;
 }

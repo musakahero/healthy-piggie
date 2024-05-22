@@ -9,6 +9,7 @@ import { Footer } from './components/Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWheatAwnCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { Create } from './components/Create/Create';
+import { NotFound } from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -23,9 +24,11 @@ function App() {
           <Route path="/pop-toxic" element={<PopToxic />}></Route>
           <Route path="/combos" element={<Combos />}></Route>
           <Route path="/add" element={<Create />}></Route>
+          <Route path="/*" element={<NotFound />}></Route>
         </Routes>
       </main>
       <Footer />
+      
     </div>
   );
 }

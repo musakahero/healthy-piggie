@@ -2,10 +2,11 @@ import { useForm } from "../../hooks/useForm";
 import styles from "./Create.module.css";
 import * as veggieService from "../../services/veggiesService";
 import { useNavigate } from "react-router-dom";
+import { BulkCreate } from "../../utils/bulkCreate";
 
 
 export const Create = (props) => {
-    
+
     const navigate = useNavigate();
 
     const onSubmitHandler = (data) => {
@@ -13,7 +14,7 @@ export const Create = (props) => {
             .then(res => console.log(res))
             .then(() => navigate("/"))
             .catch(err => alert(err));
-            
+
     }
 
     const { formValues, onChangeHandler, onSubmit, changeValues } = useForm({
@@ -26,47 +27,51 @@ export const Create = (props) => {
     }, onSubmitHandler);
 
     return (
-        <form action="post"
-            onSubmit={onSubmit}
-            className={styles['create-form']}>
-            <label htmlFor="veggieName">Name</label>
-            <input type="text"
-                name={"veggieName"}
-                onChange={onChangeHandler}
-                value={formValues.veggieName}
-            />
+        <>
+            <form action="post"
+                onSubmit={onSubmit}
+                className={styles['create-form']}>
+                <label htmlFor="veggieName">Name</label>
+                <input type="text"
+                    name={"veggieName"}
+                    onChange={onChangeHandler}
+                    value={formValues.veggieName}
+                />
 
-            <label htmlFor="isEdible">Edible?</label>
-            <input type="checkbox"
-                name="isEdible"
-                onChange={onChangeHandler}
-                value={formValues.isEdible} />
+                <label htmlFor="isEdible">Edible?</label>
+                <input type="checkbox"
+                    name="isEdible"
+                    onChange={onChangeHandler}
+                    value={formValues.isEdible} />
 
-            <label htmlFor="inModeration">In Moderation?</label>
-            <input type="checkbox"
-                name="inModeration"
-                onChange={onChangeHandler}
-                value={formValues.inModeration} />
+                <label htmlFor="inModeration">In Moderation?</label>
+                <input type="checkbox"
+                    name="inModeration"
+                    onChange={onChangeHandler}
+                    value={formValues.inModeration} />
 
-            <label htmlFor="serving">Serving</label>
-            <input type="textarea"
-                name="serving"
-                onChange={onChangeHandler}
-                value={formValues.serving} />
+                <label htmlFor="serving">Serving</label>
+                <input type="textarea"
+                    name="serving"
+                    onChange={onChangeHandler}
+                    value={formValues.serving} />
 
-            <label htmlFor="notes">Notes</label>
-            <input type="textarea"
-                name="notes"
-                onChange={onChangeHandler}
-                value={formValues.notes} />
+                <label htmlFor="notes">Notes</label>
+                <input type="textarea"
+                    name="notes"
+                    onChange={onChangeHandler}
+                    value={formValues.notes} />
 
-            <label htmlFor="comboIdeas">comboIdeas</label>
-            <input type="textarea"
-                name="comboIdeas"
-                onChange={onChangeHandler}
-                value={formValues.comboIdeas} />
+                <label htmlFor="comboIdeas">comboIdeas</label>
+                <input type="textarea"
+                    name="comboIdeas"
+                    onChange={onChangeHandler}
+                    value={formValues.comboIdeas} />
 
-            <button type='submit'>Confirm</button>
-        </form>
+                <button type='submit'>Confirm</button>
+            </form>
+
+            <BulkCreate />
+        </>
     )
 }

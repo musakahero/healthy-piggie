@@ -22,7 +22,7 @@ export const Home = (props) => {
                 setAllVeggies(result);
 
             })
-            .catch(err => alert(err));
+            .catch(err => alert(new Error("Unable to reach our piggie base, please retry later!").message));
     }, []);
 
 

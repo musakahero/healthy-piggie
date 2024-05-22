@@ -73,7 +73,7 @@ export const Search = ({
                 styles={selectStyles}
                 placeholder={'Can my guinea pig eat...'}
                 filterOption={createFilter({ matchFrom: "start" })}
-                noOptionsMessage={() => `Don't have that one yet :( Request it here: ${<Link to={"www.google.com"}></Link>} `}
+                noOptionsMessage={() => `Don't have that one yet :(`}
             />
         </div>
 
