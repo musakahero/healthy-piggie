@@ -7,7 +7,7 @@ export const Results = ({
 
     return (
         <>
-            {resultItem.isEdible && resultItem.recommendation === "high" ?
+            {resultItem.isEdible && resultItem.recommendation === "High" ?
                 <div className={styles["container-green"]}>
                     <h3>Can my guinea pig eat <span className={styles.veggieName}>{resultItem.veggieName}</span>?</h3>
                     <p>Yes, guinea pigs can eat <span className={styles.veggieName}>{resultItem.veggieName}</span>.</p>
@@ -26,7 +26,7 @@ export const Results = ({
                             <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source3}`}>Source: Click me!</Link></p>
                         </>}
                 </div>
-                : resultItem.isEdible && resultItem.recommendation === "medium" ? <div className={styles["container-yellow"]}>
+                : resultItem.isEdible && resultItem.recommendation === "Medium" ? <div className={styles["container-yellow"]}>
                     <h3>Can my guinea pig eat <span className={styles.veggieName}>{resultItem.veggieName}</span>?</h3>
                     <p>Yes, guinea pigs can eat <span className={styles.veggieName}>{resultItem.veggieName}</span>.</p>
                     <h3>What should I keep in mind when I give <span className={styles.veggieName}>{resultItem.veggieName}</span> to my guinea pig?</h3>
@@ -44,7 +44,7 @@ export const Results = ({
                             <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source3}`}>Source: Click me!</Link></p>
                         </>}
                 </div>
-                    : resultItem.isEdible && resultItem.recommendation === "low" ? <div className={styles["container-red"]}>
+                    : resultItem.isEdible && resultItem.recommendation === "Low" ? <div className={styles["container-red"]}>
                         <h3>Can my guinea pig eat <span className={styles.veggieName}>{resultItem.veggieName}</span>?</h3>
                         <p>Yes, but not recommendable.</p>
                         <h3>What should I keep in mind when I give <span className={styles.veggieName}>{resultItem.veggieName}</span> to my guinea pig?</h3>

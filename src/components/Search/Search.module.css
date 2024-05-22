@@ -1,6 +1,8 @@
 .container {
+    font-family: Caveat, Arial, Helvetica, sans-serif;
     padding: 3rem 2rem 3rem 2rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: 700;
     /* border-radius: 8px; */
     display: flex;
     justify-content: center;

@@ -72,8 +72,9 @@ export const Search = ({
                 onChange={setCurrentlySelected}
                 styles={selectStyles}
                 placeholder={'Can my guinea pig eat...'}
-                filterOption={createFilter({ matchFrom: "start" })}
+                // filterOption={createFilter({ matchFrom: "any" })}
                 noOptionsMessage={() => `Don't have that one yet :(`}
+                
             />
         </div>
 

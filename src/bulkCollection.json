@@ -1,7 +1,7 @@
 [
   {
     "veggieName": "Tomato",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Don’t feed them the stem, leaves or any other green parts as they are harmful for guinea pigs. Introduce tomatoes gradually to avoid digestive issues.",
     "serving1": "Guinea pigs can eat tomatoes a couple of times a week but only in small quantities. A baby-sized tomato or a piece of a larger tomato that is about that size for each guinea pig is enough.",
@@ -13,7 +13,7 @@
   },
   {
     "veggieName": "Green Bell Pepper",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "High",
     "recommendationNotes": "Lower amount of vitamin C than the yellow and red pepper but also the lowest amount of sugar - recommended for daily consumption. Remove the stems and seeds as they present a choking hazard. Introduce bell peppers gradually to avoid digestive issues.",
     "serving1": "Two half-inch slices per day is perfectly okay to give to your guinea pig.",
@@ -25,7 +25,7 @@
   },
   {
     "veggieName": "Green Paprika",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "High",
     "recommendationNotes": "Lower amount of vitamin C than the yellow and red pepper but also the lowest amount of sugar - recommended for daily consumption. Remove the stems and seeds as they present a choking hazard. Introduce bell peppers gradually to avoid digestive issues.",
     "serving1": "Two half-inch slices per day is perfectly okay to give to your guinea pig.",
@@ -37,7 +37,7 @@
   },
   {
     "veggieName": "Yellow Bell Pepper",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "High",
     "recommendationNotes": "Has a higher amount of vitamin C then red and green pepper. Remove the stems and seeds as they present a choking hazard. Introduce bell peppers gradually to avoid digestive issues.",
     "serving1": "As for portions, according to the Humane Society, two half-inch slices per day is perfectly okay to give to your guinea pig.",
@@ -49,7 +49,7 @@
   },
   {
     "veggieName": "Yellow Paprika",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "High",
     "recommendationNotes": "Has a higher amount of vitamin C then red and green pepper. Remove the stems and seeds as they present a choking hazard. Introduce bell peppers gradually to avoid digestive issues.",
     "serving1": "As for portions, according to the Humane Society, two half-inch slices per day is perfectly okay to give to your guinea pig.",
@@ -61,7 +61,7 @@
   },
   {
     "veggieName": "Red Bell Pepper",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "High",
     "recommendationNotes": "Has a higher amount of sugar then green and yellow pepper. Remove the stems and seeds as they present a choking hazard. Introduce bell peppers gradually to avoid digestive issues.",
     "serving1": "As for portions, according to the Humane Society, two half-inch slices per day is perfectly okay to give to your guinea pig.",
@@ -73,7 +73,7 @@
   },
   {
     "veggieName": "Red Paprika",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "High",
     "recommendationNotes": "Has a higher amount of sugar then green and yellow pepper. Remove the stems and seeds as they present a choking hazard. Introduce bell peppers gradually to avoid digestive issues.",
     "serving1": "As for portions, according to the Humane Society, two half-inch slices per day is perfectly okay to give to your guinea pig.",
@@ -85,7 +85,7 @@
   },
   {
     "veggieName": "Cucumber",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Wash the cucumber thoroughly, remove seeds, and introduce it gradually to avoid digestive issues.",
     "serving1": "A half inch chunk is plenty as part of their daily veggie portion",
@@ -97,8 +97,8 @@
   },
   {
     "veggieName": "Onion",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "Guinea pigs should not eat onion as it can be harmful to them.",
     "serving1": "N/A",
     "source1": "https://www.penthousepiggies.co.uk/can-guinea-pigs-eat/onion#:~:text=No%2C%20onions%20are%20not%20suitable,health%20problems%20in%20guinea%20pigs.",
@@ -109,8 +109,8 @@
   },
   {
     "veggieName": "Garlic",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "Guinea pigs should not eat garlic as it can be harmful to them.",
     "serving1": "N/A",
     "source1": "https://oxbowanimalhealth.com/blog/foods-guinea-pigs-should-never-eat/#:~:text=Foods%20Guinea%20Pigs%20Should%20Never%20Eat%20Include%3A&text=Chives%2C%20Garlic%2C%20Leeks%2C%20Onions",
@@ -121,7 +121,7 @@
   },
   {
     "veggieName": "Cabbage",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Introduce cabbage gradually to avoid digestive issues.",
     "serving1": "Only feed cabbage to your Guinea Pig 2-3 times a week. Generally, you shouldn’t need to feed more than one whole leaf at any single sitting.",
@@ -133,7 +133,7 @@
   },
   {
     "veggieName": "Carrot",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Carrots are high in sugar, so offer them in moderation to prevent obesity. Introduce carrots gradually to avoid digestive issues.",
     "serving1": "40 grams of carrots per day can be a good place to start, depending on the Ca:P ratio of the other foods. That would equate to a little less than half your average sized carrot.",
@@ -145,7 +145,7 @@
   },
   {
     "veggieName": "Romaine Lettuce",
-    "isEdible": "Yes",
+    "isEdible": "FALSE",
     "recommendation": "High",
     "recommendationNotes": "Overconsumption can lead to the risk of the formation of bladder stones. Introduce romaine lettuce gradually to avoid digestive issues.",
     "serving1": "When it comes to romaine and green leaf lettuce, those can be fed to your guinea pig anywhere from five to seven times a week. As a general guideline, one medium-sized leaf of lettuce should be a good amount to feed to them! This is especially true when you’re including other types of fruits and vegetables in their diet as well.",
@@ -157,7 +157,7 @@
   },
   {
     "veggieName": "Green Lettuce",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "High",
     "recommendationNotes": "Overconsumption can lead to the risk of the formation of bladder stones. Introduce romaine lettuce gradually to avoid digestive issues.",
     "serving1": "When it comes to romaine and green leaf lettuce, those can be fed to your guinea pig anywhere from five to seven times a week. As a general guideline, one medium-sized leaf of lettuce should be a good amount to feed to them! This is especially true when you’re including other types of fruits and vegetables in their diet as well.",
@@ -169,7 +169,7 @@
   },
   {
     "veggieName": "Iceberg Lettuce",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Low",
     "recommendationNotes": "Many people believe iceberg lettuce is poisonous. It is not. However it has very low nutritious value and can cause diarrhea.",
     "serving1": "Very low nutritious value, so best to avoid it.",
@@ -181,7 +181,7 @@
   },
   {
     "veggieName": "Kale",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "High",
     "recommendationNotes": "Kale is high in calcium, so offer it in moderation to prevent urinary issues. Introduce kale gradually to avoid digestive issues.",
     "serving1": "Around two to three times a week, a leaf or two of average-sized fronds",
@@ -193,7 +193,7 @@
   },
   {
     "veggieName": "Spinach",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Spinach is high in oxalates, so offer it in moderation to prevent urinary issues. Introduce spinach gradually to avoid digestive issues.",
     "serving1": "Guinea pigs need up to a cup (250 g) of fresh fruits and veggies to supplement their regular diet of hay and pellets, and should be getting their nutrition from a diverse diet! Spinach leafes can be given everyday. 40 grams of spinach per day can be a good place to start, depending on the Ca:P ratio of the other foods. This would equate to around 4 leaves, including the stems.",
@@ -205,7 +205,7 @@
   },
   {
     "veggieName": "Eggplant",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Low",
     "recommendationNotes": "Guinea pigs should not eat eggplant as it is not a particularly nutritious food and should not be a staple of their diet",
     "serving1": "N/A",
@@ -217,8 +217,8 @@
   },
   {
     "veggieName": "Leek",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "Leek is high in oxalates, which can cause bladder stones.",
     "serving1": "N/A",
     "source1": "https://www.penthousepiggies.co.uk/can-guinea-pigs-eat/leek#:~:text=It%20is%20not%20recommended%20for,health%20problems%20in%20guinea%20pigs.",
@@ -229,7 +229,7 @@
   },
   {
     "veggieName": "Corn",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Low",
     "recommendationNotes": "N/A",
     "serving1": "The raw kernels of the corn should only be fed to your guinea pig a few times a week. It would be best to limit the amount you give to them—something like two or three kernels. \n\nThe inner husks of the corn can be fed to guinea pigs daily. You can shred it into thinner strips to make it easier for them to eat. The strips could be a quarter of an inch to half an inch wide, and you can give them one or two of those.",
@@ -241,7 +241,7 @@
   },
   {
     "veggieName": "Corn husk",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "N/A",
     "serving1": "The inner husks of the corn can be fed to guinea pigs daily. You can shred it into thinner strips to make it easier for them to eat. The strips could be a quarter of an inch to half an inch wide, and you can give them one or two of those.",
@@ -253,7 +253,7 @@
   },
   {
     "veggieName": "Green beans",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Give organic green beans to your guinea pig. Regular ones often have waxes and pestisides that can be harmful for them.",
     "serving1": "One or two whole average-sized beans should be a good amount to feed them, and they should only eat them one to three times a week to ensure that it’s safe!",
@@ -265,7 +265,7 @@
   },
   {
     "veggieName": "Zucchini",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "High",
     "recommendationNotes": "Some guinea pigs don't like the tast of zucchini.",
     "serving1": "Remember, guinea pigs need up to a cup (250 g) of fresh fruits and veggies to supplement their regular diet of hay and pellets, and should be getting their nutrition from a diverse diet! 40 grams of zucchini per day can be a good place to start, depending on the Ca:P ratio of the other foods. This can equate to a 1 in to 2 in section of an medium-sized zucchini.",
@@ -277,7 +277,7 @@
   },
   {
     "veggieName": "Pumpkin",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Offer fresh, raw pumpkin, and remove seeds before feeding as they can pose a choking hazard.",
     "serving1": "Guinea pigs can be given two to three small cubes measuring around half an inch all around. To prevent over consumption, they should only be fed pumpkin once or twice a week!",
@@ -289,8 +289,8 @@
   },
   {
     "veggieName": "Potato",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "Guinea pigs can not eat potato as it can be harmful to them.",
     "serving1": "N/A",
     "source1": "https://guineadad.com/blogs/news/beware-the-most-dangerous-vegetables-for-guinea-pigs#:~:text=Their%20digestive%20system%20may%20also,cooked%20potatoes%2C%20including%20the%20skins.",
@@ -301,8 +301,8 @@
   },
   {
     "veggieName": "Rhubarb",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "Guinea pigs should not eat rhubarb as it can be harmful to them.",
     "serving1": "N/A",
     "source1": "https://oxbowanimalhealth.com/blog/foods-guinea-pigs-should-never-eat/#:~:text=In%20guinea%20pigs%2C%20the%20oxalate,friendly%20dark%20leafy%20greens%20instead.",
@@ -313,7 +313,7 @@
   },
   {
     "veggieName": "Sweet Potato",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Low",
     "recommendationNotes": "Sweet potatoes contain a lot of startch and don't offer that much nutrition.",
     "serving1": "N/A",
@@ -325,8 +325,8 @@
   },
   {
     "veggieName": "Mushrooms",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "Mushrooms don't provide that much nutrition and some variaties can be toxic.",
     "serving1": "N/A",
     "source1": "https://guineadad.com/blogs/news/can-guinea-pigs-eat-mushrooms#:~:text=For%20a%20quick%20answer%3A,probably%20better%20off%20without%20them.",
@@ -337,7 +337,7 @@
   },
   {
     "veggieName": "Broccoli",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Guinea pigs can eat the whole broccoli plant (stem, florets and stalk).",
     "serving1": "Guinea pigs can eat half a floret of broccoli with the stem 1-2 times a week. Build up to this amount very slowly to avoid bloating and stomach upset.",
@@ -349,7 +349,7 @@
   },
   {
     "veggieName": "Cherry Tomato",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Don’t feed them the stem, leaves or any other green parts as they are harmful for guinea pigs.",
     "serving1": "One small cherry tomato a day can be fed. It can be a daily inclusion in your guinea pigs diet however tomatoes are also high in Oxalic Acid.",
@@ -361,7 +361,7 @@
   },
   {
     "veggieName": "Celery",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Guinea pigs can eat all parts of the celery",
     "serving1": "Guinea pigs can safely have [one] 2-inch section of celery with some of the leaves included in their diet up to three times per week",
@@ -373,8 +373,8 @@
   },
   {
     "veggieName": "Avocado",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat avocado as it is toxic to them.",
     "serving1": "N/A",
     "source1": "https://oxbowanimalhealth.com/blog/foods-guinea-pigs-should-never-eat/#:~:text=Persin%20is%20found%20in%20all,pigs%20should%20never%20eat%20avocados.",
@@ -385,8 +385,8 @@
   },
   {
     "veggieName": "Chive",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat chives as they are toxic to them.",
     "serving1": "N/A",
     "source1": "https://www.penthousepiggies.co.uk/can-guinea-pigs-eat/chives#:~:text=Guinea%20pigs%20should%20not%20eat,if%20fed%20in%20large%20quantities.",
@@ -397,8 +397,8 @@
   },
   {
     "veggieName": "Shallot",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat shallots as they are toxic to them.",
     "serving1": "N/A",
     "source1": "https://www.penthousepiggies.co.uk/can-guinea-pigs-eat/shallots#:~:text=No%2C%20similarly%20to%20onions%2C%20guinea,unwell%20if%20they%20are%20eaten.",
@@ -409,8 +409,8 @@
   },
   {
     "veggieName": "Jalapeño pepper",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat jalapeño peppers as they are too spicy and can be harmful to them",
     "serving1": "N/A",
     "source1": "https://www.penthousepiggies.co.uk/can-guinea-pigs-eat/jalapeno#:~:text=No%2C%20it%20is%20not%20safe,or%20other%20more%20serious%20issues.",
@@ -421,8 +421,8 @@
   },
   {
     "veggieName": "Almond",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat almonds. Almonds are high in fat and can be difficult for guinea pigs to digest, potentially leading to obesity and digestive issues.",
     "serving1": "N/A",
     "source1": "https://www.hepper.com/can-guinea-pigs-eat-almonds/",
@@ -433,8 +433,8 @@
   },
   {
     "veggieName": "Peanut",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat peanuts. Peanuts are high in fat and can pose a choking hazard. They can also cause digestive problems.",
     "serving1": "N/A",
     "source1": "https://www.penthousepiggies.co.uk/can-guinea-pigs-eat/peanuts#:~:text=No%2C%20guinea%20pigs%20should%20not,and%20salt%20that%20nuts%20have.",
@@ -445,8 +445,8 @@
   },
   {
     "veggieName": "Cashew",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat cashews. Cashews are high in fat and can cause digestive issues and obesity in guinea pigs.",
     "serving1": "N/A",
     "source1": "https://www.penthousepiggies.co.uk/can-guinea-pigs-eat/cashew-nut#:~:text=No%2C%20guinea%20pigs%20should%20not,and%20salt%20that%20nuts%20have.",
@@ -457,8 +457,8 @@
   },
   {
     "veggieName": "Walnut",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat walnuts. Walnuts are very high in fat and can be difficult for guinea pigs to digest, leading to weight gain and digestive problems.",
     "serving1": "N/A",
     "source1": "https://www.penthousepiggies.co.uk/can-guinea-pigs-eat/walnut#:~:text=No%2C%20guinea%20pigs%20should%20not,cause%20digestive%20problems%2C%20like%20diarrhoea.",
@@ -469,8 +469,8 @@
   },
   {
     "veggieName": "Pecan",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat pecans. Pecans are high in fat and calories, which can contribute to obesity and digestive issues.",
     "serving1": "N/A",
     "source1": "https://guineadad.com/blogs/news/can-guinea-pigs-eat-nuts",
@@ -481,8 +481,8 @@
   },
   {
     "veggieName": "Hazelnut",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat hazelnuts. Hazelnuts are high in fat and can cause digestive upset and obesity in guinea pigs.",
     "serving1": "N/A",
     "source1": "https://guineadad.com/blogs/news/can-guinea-pigs-eat-nuts",
@@ -493,8 +493,8 @@
   },
   {
     "veggieName": "Pistachio",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat pistachios. Pistachios are high in fat and salt, which are not suitable for a guinea pig’s digestive system and overall health.",
     "serving1": "N/A",
     "source1": "https://www.penthousepiggies.co.uk/can-guinea-pigs-eat/pistachio-nut#:~:text=No%2C%20guinea%20pigs%20should%20not,and%20salt%20that%20nuts%20have.",
@@ -505,8 +505,8 @@
   },
   {
     "veggieName": "Macadamia nuts",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat macadamia nuts. Macadamia nuts are extremely high in fat and can be toxic to guinea pigs, leading to severe health issues.",
     "serving1": "N/A",
     "source1": "https://www.penthousepiggies.co.uk/can-guinea-pigs-eat/macadamia-nuts#:~:text=No%2C%20guinea%20pigs%20should%20not,and%20salt%20that%20nuts%20have.",
@@ -517,8 +517,8 @@
   },
   {
     "veggieName": "Brazil nuts",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat Brazil nuts. Brazil nuts are high in fat and selenium, which can be harmful to guinea pigs in large amounts.",
     "serving1": "N/A",
     "source1": "https://www.penthousepiggies.co.uk/can-guinea-pigs-eat/brazil-nuts#:~:text=No%2C%20guinea%20pigs%20should%20not,and%20salt%20that%20nuts%20have.",
@@ -529,8 +529,8 @@
   },
   {
     "veggieName": "Chestnut",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat chestnuts. Chestnuts, while lower in fat compared to other nuts, are still not suitable for guinea pigs due to their carbohydrate content and potential to cause digestive issues.",
     "serving1": "N/A",
     "source1": "https://www.penthousepiggies.co.uk/can-guinea-pigs-eat/chestnut#:~:text=No%2C%20guinea%20pigs%20should%20not,and%20salt%20that%20nuts%20have.",
@@ -541,8 +541,8 @@
   },
   {
     "veggieName": "Nuts",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, there are no nuts that are suitable for guinea pigs. Nuts are generally high in fat and calories, which can lead to obesity and digestive issues in guinea pigs. They also do not provide the essential nutrients that guinea pigs need to stay healthy.",
     "serving1": "N/A",
     "source1": "https://rspcavic.org/feeding-guinea-pigs/#:~:text=Make%20sure%20you%20do%20not,onions%3B%20potato%20tops%3B%20mushrooms%3B",
@@ -553,8 +553,8 @@
   },
   {
     "veggieName": "Juice",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "Guinea pigs do not require juice as part of their diet. In fact, it's best to avoid giving them juice altogether. Juice is high in sugar and lacks the necessary dietary fiber that guinea pigs need.",
     "serving1": "N/A",
     "source1": "https://www.guineapigcages.com/threads/fruit-juice.15843/",
@@ -565,7 +565,7 @@
   },
   {
     "veggieName": "Water",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "High",
     "recommendationNotes": "Keep a constant supply of clean, fresh drinking water, 24 hours a day, 365 days a year. Change the water once a day to prevent contamination. Clean the water bottle/water dispenser once a week with boiling water.",
     "serving1": "N/A",
@@ -577,8 +577,8 @@
   },
   {
     "veggieName": "Chocolate",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat chocolate. Chocolate contains theobromine and caffeine, which are toxic to guinea pigs and can cause severe health issues.",
     "serving1": "N/A",
     "source1": "https://oxbowanimalhealth.com/blog/foods-guinea-pigs-should-never-eat/#:~:text=Can%20Guinea%20Pigs%20Eat%20Chocolate,all%20chocolate%20should%20be%20avoided.",
@@ -589,8 +589,8 @@
   },
   {
     "veggieName": "Honey",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat honey. Honey can contain harmful bacteria that could upset a guinea pig's digestive system.",
     "serving1": "N/A",
     "source1": "https://petsguinea.com/can-guinea-pigs-eat-honey/",
@@ -601,8 +601,8 @@
   },
   {
     "veggieName": "Candy",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat candy. Candy is high in sugar and lacks the essential nutrients that guinea pigs need for a healthy diet.",
     "serving1": "N/A",
     "source1": "https://guineadad.com/blogs/news/can-guinea-pigs-eat-halloween-candy",
@@ -613,8 +613,8 @@
   },
   {
     "veggieName": "Cake",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat cake. Cake is high in sugar, fat, and potentially harmful ingredients like artificial colors and flavors.",
     "serving1": "N/A",
     "source1": "https://guineadad.com/blogs/news/can-guinea-pigs-eat-halloween-candy",
@@ -625,8 +625,8 @@
   },
   {
     "veggieName": "Sweets",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat sweets. Sweets, including candies, chocolates, cookies, cakes, and other sugary treats, are not suitable for guinea pigs. These foods are high in sugar, fat, and artificial additives, which can be harmful to a guinea pig's delicate digestive system and overall health.",
     "serving1": "N/A",
     "source1": "https://guineadad.com/blogs/news/can-guinea-pigs-eat-halloween-candy",
@@ -637,7 +637,7 @@
   },
   {
     "veggieName": "Hay",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "High",
     "recommendationNotes": "Guinea pigs don’t only like to eat hay, they also like to play with it. Do not be surprised if the guinea pigs pull some of the hay on the floor and just stomp it. They just love it so - for them hay is life.",
     "serving1": "Guinea pigs should eat as much hay as they desire and should have constant access to hay. Your average guinea pig eats at least one bundle of hay as big as its body each day, but may need more. So be sure to provide your guinea pig with hay 24/7!",
@@ -649,7 +649,7 @@
   },
   {
     "veggieName": "Alfalfa hay",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Alfalfa (i.e. lucerne) is a legume with a high calcium and protein content. It is sometimes recommended for guinea pigs younger than 4 months, nursing and pregnang guinea pigs in order to prevent malnutrional issues.",
     "serving1": "If you want to give your pregnant or nursing guinea pig some alfalfa hay offer a small amount of  about a 1/4  cup per day, alongside the grass hay.",
@@ -661,7 +661,7 @@
   },
   {
     "veggieName": "Apple",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Remove the seeds as they can be harmful. Introduce apples gradually to avoid digestive issues.",
     "serving1": "Apples should only be fed occasionally because of their sugar content. A serving of ½-inch cube twice per week is a reasonable amount, assuming it does not cause your pet diarrhea.",
@@ -673,7 +673,7 @@
   },
   {
     "veggieName": "Blueberry",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Wash them thoroughly to remove any pesticides. Introduce blueberries gradually to avoid digestive issues.",
     "serving1": "Guinea pigs can safely eat one or two blueberries once a week, unless they are prone to digestive upset or oral sores.",
@@ -685,7 +685,7 @@
   },
   {
     "veggieName": "Banana",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Bananas are high in sugar, so give in very small amounts. Introduce bananas gradually to avoid digestive issues.",
     "serving1": "Approximately 10-15 grams of banana is the most your guinea pig should have in a week. You can serve it as a small slice, or smush the banana between your fingers for a sweet treat!",
@@ -697,7 +697,7 @@
   },
   {
     "veggieName": "Orange",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Oranges have a high amount of sugar and overconsumption can lead to an upset stomach for your guinea pig.",
     "serving1": "Once or twice a week. The serving size should be about the size of your thumb, or one regular wedge of the fruit.",
@@ -709,7 +709,7 @@
   },
   {
     "veggieName": "Grape",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Remove the seeds as they can be a choking hazard for the guinea pig. You can buy seedless grapes for convenience. Introduce grapes gradually to avoid digestive issues.",
     "serving1": "Grapes should only be fed to a guinea pig occasionally—once or twice a week at most. One grape per sitting is plenty for your cavy.",
@@ -721,7 +721,7 @@
   },
   {
     "veggieName": "Honeydew Melon",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Remove the seeds as they can be a choking hazard for the guinea pig.",
     "serving1": "We recommend feeding them honeydew up to twice a week! However, the serving size should be around a one-inch cube",
@@ -733,7 +733,7 @@
   },
   {
     "veggieName": "Pear",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Remove the seeds as they can be a choking hazard for the guinea pig.",
     "serving1": "When serving pears to your guinea pigs, give them two or three, one-inch cubes, up to twice a week.",
@@ -745,7 +745,7 @@
   },
   {
     "veggieName": "Peach",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Peaches are quite acidic which means that overconsumption can lead to mouth sores. They are also high in sugar content which means that too much peach can hurt the stomach of the guinea pig.",
     "serving1": "One or two, one-inch wedges once or twice a week at most!",
@@ -757,7 +757,7 @@
   },
   {
     "veggieName": "Kiwi",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Kiwis have a high amount of sugar which can lead to obesity and diabities. They are also high in calcium and rich in water which means that overconsuption can lead to the development bladder stones or cause diarrhea.",
     "serving1": "The best amount of kiwi to give to your guinea pig is probably around one teaspoon-sized serving, once a week",
@@ -769,7 +769,7 @@
   },
   {
     "veggieName": "Mango",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Oranges have a high amount of sugar and overconsumption can lead to an upset stomach for your guinea pig.",
     "serving1": "The best serving size would probably be around a one square-inch cube around once or twice a week!",
@@ -781,7 +781,7 @@
   },
   {
     "veggieName": "Papaya",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Remove the seeds as they can be a choking hazard for the guinea pig.",
     "serving1": "For optimum health benefits, feeding your guinea pigs three pieces of around 1 inch twice a week is best.",
@@ -793,7 +793,7 @@
   },
   {
     "veggieName": "Appricot",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Introduce apricots gradually to avoid digestive issues",
     "serving1": "The best would be one or two times a week and one, half-inch slice",
@@ -805,7 +805,7 @@
   },
   {
     "veggieName": "Raisins",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Low",
     "recommendationNotes": "No, guinea pigs should not eat raisins. Raisins are dried grapes and have a high sugar content, which can cause severe health issues for guinea pigs, including obesity and diabetes.",
     "serving1": "N/A",
@@ -817,8 +817,8 @@
   },
   {
     "veggieName": "Dates",
-    "isEdible": "No",
-    "recommendation": "Not recommended",
+    "isEdible": "FALSE",
+    "recommendation": "N/A",
     "recommendationNotes": "No, guinea pigs should not eat dates. Dates contain high levels of sugar, which are harmful to guinea pigs and can lead to severe health issues, including obesity, diabetes, and digestive problems. Additionally, the sticky texture of dates can pose a choking hazard and cause dental issues.",
     "serving1": "N/A",
     "source1": "https://www.penthousepiggies.co.uk/can-guinea-pigs-eat/dates#:~:text=It%20is%20generally%20not%20recommended,if%20fed%20in%20large%20amounts.",
@@ -829,7 +829,7 @@
   },
   {
     "veggieName": "Blackberries",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Introduce blackberries gradually to avoid digestive issues",
     "serving1": "Blackberries can be fed to us 2-4 times per week in 25-gram portions",
@@ -841,7 +841,7 @@
   },
   {
     "veggieName": "Blueberries",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Introduce blueberries gradually to avoid digestive issues",
     "serving1": "Yes, but only in moderation. Guinea pigs can safely eat one or two blueberries once a week, unless they are prone to digestive upset or oral sores.",
@@ -853,7 +853,7 @@
   },
   {
     "veggieName": "Cranberries",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Introduce cranberries gradually to avoid digestive issues",
     "serving1": "Berries should always be a treat for guinea pigs and not a mainstay of their diet.",
@@ -865,7 +865,7 @@
   },
   {
     "veggieName": "Grapefruit",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Remove the seeds as guinea pigs can get sick from eating them.",
     "serving1": "The safest way to go about this is to feed them grapefruit once or twice a week! A good amount would be one, half-inch cube",
@@ -877,7 +877,7 @@
   },
   {
     "veggieName": "Pineapple",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Introduce pineapple gradually to avoid digestive issues",
     "serving1": "We think one square-inch cube, once a week is a good amount to feed your guinea pig!",
@@ -889,7 +889,7 @@
   },
   {
     "veggieName": "Plums",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Introduce plums gradually to avoid digestive issues",
     "serving1": "it should only be about one or two small slices of plum, twice a week at most",
@@ -901,7 +901,7 @@
   },
   {
     "veggieName": "Raspberries",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Introduce raspberries gradually to avoid digestive issues",
     "serving1": "At most should only be fed once or twice a week as a sweet treat. The serving size should be only one or two raspberries at most!",
@@ -913,7 +913,7 @@
   },
   {
     "veggieName": "Watermelon",
-    "isEdible": "Yes",
+    "isEdible": "TRUE",
     "recommendation": "Medium",
     "recommendationNotes": "Introduce watermelon gradually to avoid digestive issues",
     "serving1": "two or three square-inch cubes, once a week at most",

@@ -20,6 +20,7 @@ export const Home = (props) => {
         veggiesService.getAll()
             .then(result => {
                 setAllVeggies(result);
+                console.log(result);
 
             })
             .catch(err => alert(new Error("Unable to reach our piggie base, please retry later!").message));
