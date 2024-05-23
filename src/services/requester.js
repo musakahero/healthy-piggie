@@ -1,17 +1,20 @@
 // import { Navigate } from "react-router-dom";
 
-export const request = async (method, url, data, token, isLogout) => {
+export const request = async (method, url, data, key, token) => {
 
     const options = {};
 
     //isLogout defines whether body is required for the GET request
-    if (method !== 'GET' || isLogout) {
+    if (method !== 'GET') {
         options.method = method;
         options.headers = {};
 
         if (data) {
             options.headers['Content-Type'] = 'application/json';
             options.body = JSON.stringify(data);
+        };
+        if (key) {
+            options.headers['apikey'] = key;
         };
 
         if (token) {
