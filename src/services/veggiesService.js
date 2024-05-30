@@ -1,30 +1,58 @@
 import * as request from './requester';
+import PocketBase from 'pocketbase';
 
-// const baseUrl = 'http://127.0.0.1:8090/api/collections/veggies/records';
-const baseUrl = 'https://healthy-piggie.pockethost.io/api/collections/veggies/records';
+const url = 'https://healthy-piggie.pockethost.io/'
+const client = new PocketBase(url);
 
 // Get all veggie items from DB
 export const getAll = async () => {
-    const result = await request.get(`${baseUrl}?perPage=100`);
-    return result.items;
+    const records = await client.collection('veggies').getFullList();
+    return records;
 };
 
-//Get one veggie item from DB
+// Get one veggie item from DB
 export const getOne = async (recordId) => {
-    const result = await request.get(`${baseUrl}/${recordId}`);
-    return result;
+    const record1 = await client.collection('veggies').getOne(recordId);
+    return record1;
+};
+
+// Update record
+export const edit = async (recordId, data) => {
+    const record = await client.collection('veggies').update(recordId, data);
+    return record;
 }
 
-// update search counter
-export const edit = async (recordId, data) => {
-    const result = await request.patch(`${baseUrl}/${recordId}`, data);
-    return result;
-};
-
+//Create record
 export const create = async (data) => {
-    const result = await request.post(baseUrl, data);
-    return result;
-};
+        const record = await client.collection('veggies').create(data);
+        return record;
+}
+
+// const baseUrl = 'http://127.0.0.1:8090/api/collections/veggies/records';
+// const baseUrl = 'https://healthy-piggie.pockethost.io/api/collections/veggies/records';
+
+// Get all veggie items from DB
+// export const getAll = async () => {
+//     const result = await request.get(`${baseUrl}?perPage=100`);
+//     return result.items;
+// };
+
+//Get one veggie item from DB
+// export const getOne = async (recordId) => {
+//     const result = await request.get(`${baseUrl}/${recordId}`);
+//     return result;
+// }
+
+// update search counter
+// export const edit = async (recordId, data) => {
+//     const result = await request.patch(`${url}/${recordId}`, data);
+//     return result;
+// };
+
+// export const create = async (data) => {
+//     const result = await request.post(url, data);
+//     return result;
+// };
 
 // export const deleteItem = async (recordId) => {
 //     const result = await request.del(`${baseUrl}/${recordId}`, {});
