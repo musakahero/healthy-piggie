@@ -20,11 +20,6 @@ export const Results = ({
                         <><p>{resultItem.serving2}</p>
                             <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source2}`}>Source: Click me!</Link></p>
                         </>}
-                    {resultItem.serving3 !== "N/A" &&
-                        <>
-                            <p>{resultItem.serving3}</p>
-                            <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source3}`}>Source: Click me!</Link></p>
-                        </>}
                 </div>
                 : resultItem.isEdible && resultItem.recommendation === "Medium" ? <div className={styles["container-yellow"]}>
                     <h3>Can my guinea pig eat <span className={styles.veggieName}>{resultItem.veggieName}</span>?</h3>
@@ -37,11 +32,6 @@ export const Results = ({
                     {resultItem.serving2 !== "N/A" &&
                         <><p>{resultItem.serving2}</p>
                             <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source2}`}>Source: Click me!</Link></p>
-                        </>}
-                    {resultItem.serving3 !== "N/A" &&
-                        <>
-                            <p>{resultItem.serving3}</p>
-                            <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source3}`}>Source: Click me!</Link></p>
                         </>}
                 </div>
                     : resultItem.isEdible && resultItem.recommendation === "Low" ? <div className={styles["container-red"]}>
