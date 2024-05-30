@@ -1,6 +1,7 @@
 import * as request from './requester';
 
-const baseUrl = 'http://127.0.0.1:8090/api/collections/veggies/records';
+// const baseUrl = 'http://127.0.0.1:8090/api/collections/veggies/records';
+const baseUrl = 'https://healthy-piggie.pockethost.io/api/collections/veggies/records';
 
 // Get all veggie items from DB
 export const getAll = async () => {
