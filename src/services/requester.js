@@ -1,6 +1,6 @@
 // import { Navigate } from "react-router-dom";
 
-export const request = async (method, url, data, key, token) => {
+export const request = async (method, url, data, token) => {
 
     const options = {};
 
@@ -12,9 +12,6 @@ export const request = async (method, url, data, key, token) => {
         if (data) {
             options.headers['Content-Type'] = 'application/json';
             options.body = JSON.stringify(data);
-        };
-        if (key) {
-            options.headers['apikey'] = key;
         };
 
         if (token) {
