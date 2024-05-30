@@ -12,24 +12,27 @@ export const BulkCreate = (props) => {
     const onClickHandler = () => {
         let entries = require('../bulkCollection.json');
 
+
         entries.forEach(e => {
-            // Validate every prop of every object
-            for (const prop in e) {
-                // Check if props contain empty strings and fix them to "N/A"
-                if (e[prop].length < 1) {
-                    e[prop] = "N/A";
-                } 
-                // Trim the value to avoid whitespaces and convert "Yes" to True and "No" to False 
-                if (e[prop].trim()==="Yes"){
-                    e[prop] = "TRUE";
-                } else if (e[prop].trim()==="No"){
-                    e[prop] = "FALSE";
+            setTimeout(() => {
+                // Validate every prop of every object
+                for (const prop in e) {
+                    // Check if props contain empty strings and fix them to "N/A"
+                    if (e[prop].length < 1) {
+                        e[prop] = "N/A";
+                    }
+                    // Trim the value to avoid whitespaces and convert "Yes" to True and "No" to False 
+                    if (e[prop].trim() === "Yes") {
+                        e[prop] = "TRUE";
+                    } else if (e[prop].trim() === "No") {
+                        e[prop] = "FALSE";
+                    };
                 };
-            };
-            // Send POST request
-            veggieService.create(e)
-                .then(res => console.log(res))
-                .catch(err => alert(err))
+                // Send POST request
+                veggieService.create(e)
+                    .then(res => console.log(res))
+                    .catch(err => alert(err))
+            }, 1000)
         });
     }
 
