@@ -24,7 +24,7 @@ export const edit = async (recordId, data) => {
 
 //Create record
 export const create = async (data) => {
-        const record = await client.collection('veggies').create(data);
+        const record = await client.collection('veggies').create(data, { requestKey: null });
         return record;
 }
 
