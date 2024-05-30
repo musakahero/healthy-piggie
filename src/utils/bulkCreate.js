@@ -14,7 +14,7 @@ export const BulkCreate = (props) => {
 
 
         entries.forEach(e => {
-            setTimeout(() => {
+            // setTimeout(() => {
                 // Validate every prop of every object
                 for (const prop in e) {
                     // Check if props contain empty strings and fix them to "N/A"
@@ -31,8 +31,8 @@ export const BulkCreate = (props) => {
                 // Send POST request
                 veggieService.create(e)
                     .then(res => console.log(res))
-                    .catch(err => alert(err))
-            }, 1000)
+                    .catch(err => console.log(err.message))
+            // }, 1000)
         });
     }
 
