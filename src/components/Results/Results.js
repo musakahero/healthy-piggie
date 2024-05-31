@@ -16,7 +16,7 @@ export const Results = ({
                     <h3 className={styles.howMuch}>How much <span className={styles.veggieName}>{resultItem.veggieName}</span> should I give my guinea pig per day?</h3>
                     <p>{resultItem.serving1}</p>
                     <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source1}`}>Source: Click me!</Link></p>
-                    {resultItem.serving2 !== "N/A" &&
+                    {resultItem.serving2 !== "NULL" &&
                         <><p>{resultItem.serving2}</p>
                             <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source2}`}>Source: Click me!</Link></p>
                         </>}
@@ -29,7 +29,7 @@ export const Results = ({
                     <h3 className={styles.howMuch}>How much <span className={styles.veggieName}>{resultItem.veggieName}</span> should I give my guinea pig per day?</h3>
                     <p>{resultItem.serving1}</p>
                     <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source1}`}>Source: Click me!</Link></p>
-                    {resultItem.serving2 !== "N/A" &&
+                    {resultItem.serving2 !== "NULL" &&
                         <><p>{resultItem.serving2}</p>
                             <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source2}`}>Source: Click me!</Link></p>
                         </>}
