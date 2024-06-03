@@ -30,3 +30,7 @@
     text-align: center;
 }
 
+/* responsiveness */
+@media screen and (min-width: 1280px){
+    
+}

@@ -8,32 +8,50 @@ export const Results = ({
     return (
         <>
             {resultItem.isEdible && resultItem.recommendation === "High" ?
+                // High reco
                 <div className={styles["container-green"]}>
-                    <h3>Can my guinea pig eat <span className={styles.veggieName}>{resultItem.veggieName}</span>?</h3>
-                    <p>Yes, guinea pigs can eat <span className={styles.veggieName}>{resultItem.veggieName}</span>.</p>
-                    <h3>What should I keep in mind when I give <span className={styles.veggieName}>{resultItem.veggieName}</span> to my guinea pig?</h3>
-                    <p>{resultItem.recommendationNotes}</p>
-                    <h3 className={styles.howMuch}>How much <span className={styles.veggieName}>{resultItem.veggieName}</span> should I give my guinea pig per day?</h3>
-                    <p>{resultItem.serving1}</p>
-                    <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source1}`}>Source: Click me!</Link></p>
-                    {resultItem.serving2 !== "NULL" &&
-                        <><p>{resultItem.serving2}</p>
-                            <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source2}`}>Source: Click me!</Link></p>
-                        </>}
+                    <div className={`${styles["column-card"]} ${styles["isEdible"]}`}>
+                        <p>Yes, guinea pigs can eat <span className={styles.veggieName}>{resultItem.veggieName}</span></p>
+
+                    </div>
+                    <div className={styles["column-card"]}>
+                        <h3>What should I keep in mind when I give <span className={styles.veggieName}>{resultItem.veggieName}</span> to my guinea pig?</h3>
+                        <p>{resultItem.recommendationNotes}</p>
+                    </div>
+                    <div className={styles["column-card"]}>
+                        <h3 className={styles.howMuch}>How much <span className={styles.veggieName}>{resultItem.veggieName}</span> should I give my guinea pig per day?</h3>
+                        <p>{resultItem.serving1}</p>
+                        <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source1}`}>Source: Click me!</Link></p>
+                        {(resultItem.serving2 !== "NULL" && resultItem.serving2 !== "N/A")
+                            &&
+                            <><p>{resultItem.serving2}</p>
+                                <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source2}`}>Source: Click me!</Link></p>
+                            </>}
+                    </div>
                 </div>
-                : resultItem.isEdible && resultItem.recommendation === "Medium" ? <div className={styles["container-yellow"]}>
-                    <h3>Can my guinea pig eat <span className={styles.veggieName}>{resultItem.veggieName}</span>?</h3>
-                    <p>Yes, guinea pigs can eat <span className={styles.veggieName}>{resultItem.veggieName}</span>.</p>
-                    <h3>What should I keep in mind when I give <span className={styles.veggieName}>{resultItem.veggieName}</span> to my guinea pig?</h3>
-                    <p>{resultItem.recommendationNotes}</p>
-                    <h3 className={styles.howMuch}>How much <span className={styles.veggieName}>{resultItem.veggieName}</span> should I give my guinea pig per day?</h3>
-                    <p>{resultItem.serving1}</p>
-                    <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source1}`}>Source: Click me!</Link></p>
-                    {resultItem.serving2 !== "NULL" &&
-                        <><p>{resultItem.serving2}</p>
-                            <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source2}`}>Source: Click me!</Link></p>
-                        </>}
-                </div>
+                // Medium reco
+                : resultItem.isEdible && resultItem.recommendation === "Medium" ?
+                    <div className={styles["container-yellow"]}>
+                        <div className={`${styles["column-card"]} ${styles["isEdible"]}`}>
+                            <p>Yes, guinea pigs can eat <span className={styles.veggieName}>{resultItem.veggieName}</span></p>
+                        </div>
+                        <div className={styles["column-card"]}>
+                            <h3>What should I keep in mind when I give <span className={styles.veggieName}>{resultItem.veggieName}</span> to my guinea pig?</h3>
+                            <p>{resultItem.recommendationNotes}</p>
+                        </div>
+                        <div className={styles["column-card"]}>
+                            <h3 className={styles.howMuch}>How much <span className={styles.veggieName}>{resultItem.veggieName}</span> should I give my guinea pig per day?</h3>
+                            <p>{resultItem.serving1}</p>
+                            <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source1}`}>Source: Click me!</Link></p>
+                            {(resultItem.serving2 !== "NULL" && resultItem.serving2 !== "N/A")
+                                &&
+                                <>
+                                    <p>{resultItem.serving2}</p>
+                                    <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source2}`}>Source: Click me!</Link></p>
+                                </>}
+                        </div>
+                    </div>
+                    // Low reco
                     : resultItem.isEdible && resultItem.recommendation === "Low" ? <div className={styles["container-red"]}>
                         <h3>Can my guinea pig eat <span className={styles.veggieName}>{resultItem.veggieName}</span>?</h3>
                         <p>Yes, but not recommendable.</p>
@@ -43,10 +61,11 @@ export const Results = ({
                         <p>{resultItem.serving1}</p>
                         <p className={styles.source}><Link target={"_blank"} to={`${resultItem.source1}`}>Source: Click me!</Link></p>
                     </div>
+                        // Not reco
                         : <div className={styles["container-no"]}>
                             <h3>Can my guinea pig eat <span className={styles.veggieName}>{resultItem.veggieName}</span>?</h3>
                             <p className={styles.recoNotes}>No. {resultItem.recommendationNotes}</p>
-                            <p className={styles.source} style={{gridArea:'sourceSingle'}}><Link target={"_blank"} to={`${resultItem.source1}`}>Source: Click me!</Link></p>
+                            <p className={styles.source} style={{ gridArea: 'sourceSingle' }}><Link target={"_blank"} to={`${resultItem.source1}`}>Source: Click me!</Link></p>
                         </div>
             }
         </>

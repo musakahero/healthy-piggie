@@ -25,7 +25,7 @@ export const Search = ({
             ...styles,
             textAlign: "center",
             backgroundColor: "whitesmoke",
-            minWidth: "20vw",
+            minWidth: "30vw",
             borderRadius: "12px",
             "&:hover": {
                 border: "1px solid #87A922"
