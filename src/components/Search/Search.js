@@ -30,7 +30,7 @@ export const Search = ({
             "&:hover": {
                 border: "1px solid #87A922"
             },
-            borderColor: `${state.isFocused && "#87A922"}`,
+            borderColor: `${state.isFocused ? "#87A922":"grey"}`
         }),
         clearIndicator: (styles, state) => ({
             ...styles, 

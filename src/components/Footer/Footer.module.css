@@ -1,8 +1,9 @@
 .container {
     /* border: 1px solid red; */
-    font-family: Caveat, sans-serif;
+    /* font-family: Caveat, sans-serif; */
     padding: 1rem 2rem 1rem 2rem;
-    font-size: 2rem;
+    /* font-size: 2rem; */
+    font-size: 1.1rem;
     display: flex;
     justify-content: space-around;
     gap: 2rem;
