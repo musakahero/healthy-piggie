@@ -5,9 +5,11 @@ import * as veggiesService from '../../services/veggiesService';
 import { useSearch } from '../../hooks/useSearch';
 import { Search } from '../Search/Search';
 import { PopSearches } from '../PopSearches/PopSearches';
+import { Loading } from '../Loading/Loading';
 
 export const Home = (props) => {
     const [allVeggies, setAllVeggies] = useState([]);
+    const [showLoading, setShowLoading] = useState(false);
 
     //Search functionality (useSearch custom hook)
     const { options,
@@ -17,18 +19,20 @@ export const Home = (props) => {
 
     // Fetch all veggies
     useEffect(() => {
+        setShowLoading(true);
         veggiesService.getAll()
             .then(result => {
                 setAllVeggies(result);
                 console.log(result);
 
-            })
+            }).then(setShowLoading(false))
             .catch(err => alert(new Error("Unable to reach our piggie base, please retry later!").message));
     }, []);
 
 
     return (
         <>
+            {showLoading ? <Loading /> : null}
             {/* Introductory paragraph */}
             <p className={styles.intro}>You're about to feed your piggie with a special treat? Check here if it's a good idea!</p>
 
