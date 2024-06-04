@@ -5,7 +5,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 .container-green,
 .container-yellow,
 .container-red,
@@ -22,7 +21,6 @@
         'isEdible isEdible'
         '. .';
 }
-
 .container-green .column-card,
 .container-yellow .column-card,
 .container-red .column-card,
@@ -35,7 +33,6 @@
     gap: 1rem;
     text-align: start;
 }
-
 .container-green .column-card.isEdible,
 .container-yellow .column-card.isEdible,
 .container-red .column-card.isEdible, 
@@ -46,7 +43,6 @@
     font-size: 2rem;
     padding: 1rem 2rem 1rem 2rem;
 }
-
 .container-green h3,
 .container-yellow h3,
 .container-red h3,
@@ -57,7 +53,6 @@
     text-align: center;
     margin-bottom: 1.5rem;
 }
-
 .container-green .source a:hover,
 .container-yellow .source a:hover,
 .container-red .source a:hover,
@@ -69,27 +64,21 @@
 .container-green {
     color: #F7F6BB;
 }
-
 .container-green .column-card {
     background-color: #526714;
 }
-
 .container-green .column-card.isEdible {
     color: #F7F6BB;
 }
-
 .container-green h3 {
     color: #F7F6BB;
 }
-
 .container-green .source {
     color: #FCDC2A;
 }
-
 .container-green .source a:hover {
     color: #114232;
 }
-
 .container-green .veggieName {
     color: #FCDC2A;
 }
@@ -98,23 +87,18 @@
 .container-yellow {
     color: #114232;
 }
-
 .container-yellow .column-card {
     background-color: #FCDC2A;
 }
-
 .container-yellow .column-card.isEdible {
     color: rgb(175, 88, 8);
 }
-
 .container-yellow h3 {
     color: rgb(175, 88, 8);
 }
-
 .container-yellow .source a:hover {
     color: rgb(175, 88, 8);
 }
-
 .container-yellow .veggieName {
     color: #114232;
 }
@@ -132,10 +116,10 @@
 .container-red .source a:hover {
     color: #114232;
 }
-
 .container-red .veggieName {
     color: #F7F6BB;
 }
+
 /* No answer version */
 .container-no {
     color: #F7F6BB;
@@ -161,11 +145,9 @@
 .howMuch {
     grid-area: howMuch;
 }
-
 .isEdible {
     grid-area: isEdible;
 }
-
 .recoNotes {
     grid-area: recoNotes;
 }
