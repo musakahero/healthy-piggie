@@ -1,10 +1,17 @@
+/* Spinner container */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 65vh;
+}
+
 /* Intro section */
 .intro {
     text-align:center;
     font-size: 1.8rem;
     padding: 3rem 5rem 3rem 5rem;
-    color: #114232;
-
+    color: black;
 }
 
 /* Most searched foods section */
@@ -12,8 +19,8 @@
     padding: 3rem 5rem 3rem 5rem;
     font-size: 2rem;
     font-weight: 700;
-    background-color: #ffe65c;
-    color: #114232;
+    background-color: var(--bg-secondary);
+    color: black;
     font-family: Caveat, Arial, Helvetica, sans-serif;
 }
 .pop-questions li {
@@ -22,7 +29,7 @@
 }
 
 .pop-questions li:hover {
-    color: #87A922;
+    color: var(--accent-main);
 }
 
 .results {

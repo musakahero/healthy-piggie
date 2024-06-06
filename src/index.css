@@ -2,6 +2,17 @@
 /* makes sizing simpler */
 *, *::before, *::after {
   box-sizing: border-box;
+
+  /* color vars */
+  --accent-main: #808836;
+  --bg-main: #FFBF00;
+  --bg-secondary: #FF9A00;
+  --accent-secondary:#D10363;
+  --medium-blue: #2A75BB;
+  --light-blue: #3184d2;
+  --light-blue-secondary:#70a3d2;
+  --medium-green: #4BAF50;
+  --font-light: #fbdf8a;
 }
 *::-webkit-scrollbar {
   border-radius: 8px;
@@ -14,7 +25,7 @@
 }
 *::-webkit-scrollbar-thumb:hover{
   border-radius: 8px;
-  background-color: #87A922 ;
+  background-color: #87A922;
 }
 /* remove default spacing */
 /* force styling of type through styling, rather than elements */
@@ -32,9 +43,8 @@ html {
 /* min body height */
 body {
   /* min-height: 80vh; */
-  /* background-color: rgb(241, 236, 236); */
-  background-color: #114232f1;
-
+  /* background: linear-gradient(180deg, rgba(128,136,54,1) 50%, rgba(49,132,210,1) 100%); */
+  background-color: var(whitesmoke);
 }
 
 /* responsive images/videos */
@@ -52,3 +62,5 @@ a{
   text-decoration: none;
   color: inherit;
 }
+
+/* color vars */

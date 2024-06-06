@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWheatAwnCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { Create } from './components/Create/Create';
 import { NotFound } from './components/NotFound/NotFound';
+import CookieConsent from "react-cookie-consent";
 
 function App() {
   return (
@@ -28,6 +29,19 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <CookieConsent
+      debug={true}
+      contentStyle={
+        {fontSize:"1.3rem"}
+      }
+      style={{
+        alignItems:"center",
+        backgroundColor:"rgba(0, 0, 0, 0.84)"
+      }}
+      buttonStyle={{
+        fontSize:"1.4rem"
+      }}
+      >We collect cookies to analyze our website traffic and performance; we never collect any personal data.</CookieConsent>
       
     </div>
   );
