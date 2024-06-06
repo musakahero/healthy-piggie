@@ -9,16 +9,16 @@
     gap: 2rem;
     margin-top: auto;
     width: 100%;
-    background-color: #114232;
-    color: #F7F6BB;
+    background-color: var(--medium-blue);
+    color: var(--font-light);
 }
 
 .copyright {
     font-family: Caveat, sans-serif;
-    background-color: #114232f1;
-    color: #F7F6BB;
+    background-color: var(--light-blue);
+    color: var(--font-light);
     font-size: 1.2rem;
     text-align: center;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0.2rem 1rem 0.2rem 1rem;
 
 }

@@ -35,9 +35,9 @@ export const Search = ({
         clearIndicator: (styles, state) => ({
             ...styles, 
             paddingLeft: "0",
-            color: "#87A922",
+            color: "var(--medium-blue)",
             "&:hover": {
-                color: "#114232"
+                color: "var(--light-blue-secondary)"
             }
         }),
         dropdownIndicator: lightGreenColoredHover,

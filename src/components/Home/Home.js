@@ -6,6 +6,7 @@ import { useSearch } from '../../hooks/useSearch';
 import { Search } from '../Search/Search';
 import { PopSearches } from '../PopSearches/PopSearches';
 import { Loading } from '../Loading/Loading';
+import { Loading2 } from '../Loading2/Loading2';
 
 export const Home = (props) => {
     const [allVeggies, setAllVeggies] = useState([]);
@@ -20,40 +21,43 @@ export const Home = (props) => {
     // Fetch all veggies
     useEffect(() => {
         setShowLoading(true);
+        console.log('set to true');
         veggiesService.getAll()
             .then(result => {
                 setAllVeggies(result);
                 console.log(result);
-
-            }).then(setShowLoading(false))
+            })
+            .then(() => setShowLoading(false))
             .catch(err => alert(new Error("Unable to reach our piggie base, please retry later!").message));
     }, []);
 
 
     return (
         <>
-            {showLoading ? <Loading /> : null}
-            {/* Introductory paragraph */}
-            <p className={styles.intro}>You're about to feed your piggie with a special treat? Check here if it's a good idea!</p>
+            {showLoading ? <div className={styles["spinner-container"]}><Loading /></div>
+                : <>
+                    {/* //Introductory paragraph */}
+                    <p className={styles.intro}>You're about to feed your piggie with a special treat? Check here if it's a good idea!</p>
 
-            {/* Search component */}
-            <Search
-                setCurrentlySelected={setCurrentlySelected}
-                options={options}
-                currentlySelected={currentlySelected} />
+                    {/* //Search component */}
+                    <Search
+                        setCurrentlySelected={setCurrentlySelected}
+                        options={options}
+                        currentlySelected={currentlySelected} />
 
 
-            {/* Results section */}
-            <section className={styles.results}>
-                {/* Show results section only if foundItem is not falsey */}
-                {resultItem && <Results resultItem={resultItem} />}
-            </section>
-            {/* Most popular searches section */}
-            <section className={styles["pop-questions"]}>
-                <PopSearches allVeggies={allVeggies}
-                    setCurrentlySelected={setCurrentlySelected}
-                />
-            </section>
+                    {/* //Results section */}
+                    <section className={styles.results}>
+                        {/* //Show results section only if foundItem is not falsey */}
+                        {resultItem && <Results resultItem={resultItem} />}
+                    </section>
+                    {/* // Most popular searches section */}
+                    <section className={styles["pop-questions"]}>
+                        <PopSearches allVeggies={allVeggies}
+                            setCurrentlySelected={setCurrentlySelected}
+                        />
+                    </section>
+                </>}
         </>
     )
 }
