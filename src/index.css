@@ -4,19 +4,20 @@
   box-sizing: border-box;
 
   /* color vars */
-  --accent-main: #808836;
-  --bg-main: #FFBF00;
-  --bg-secondary: #FF9A00;
-  --accent-secondary:#D10363;
-  --medium-blue: #2A75BB;
-  --light-blue: #3184d2;
-  --light-blue-secondary:#70a3d2;
-  --medium-green: #4BAF50;
-  --font-light: #fbdf8a;
+  --accent-main: #B1AFFF;
+  --bg-main: #FDFDBD;
+  --bg-secondary: #C8FFD4;
+  --font-dark: black;
+  --font-dark-accent: #9e72f0;
+  --accent-secondary: #B8E8FC;
+  --font-light: #FDFDFD;
+  --bg-high-reco: #2E8B57 ;
+  --bg-medium-reco: #FFB800;
+  --bg-low-reco: #FF9933 ;
+  --bg-not-reco: #CD5C5C;
 }
-*::-webkit-scrollbar {
+/* *::-webkit-scrollbar {
   border-radius: 8px;
-  
   background-color: #F7F6BB;
 }
 *::-webkit-scrollbar-thumb{
@@ -26,7 +27,7 @@
 *::-webkit-scrollbar-thumb:hover{
   border-radius: 8px;
   background-color: #87A922;
-}
+} */
 /* remove default spacing */
 /* force styling of type through styling, rather than elements */
 * {

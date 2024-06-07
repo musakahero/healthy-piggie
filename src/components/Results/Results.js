@@ -53,7 +53,7 @@ export const Results = ({
                     </div>
                     // Low reco
                     : resultItem.isEdible && resultItem.recommendation === "Low" ?
-                        <div className={styles["container-red"]}>
+                        <div className={styles["container-orange"]}>
                             <div className={`${styles["column-card"]} ${styles["isEdible"]}`}>
                                 <p>Yes, but not recommended</p>
                             </div>

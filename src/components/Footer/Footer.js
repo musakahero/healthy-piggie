@@ -10,7 +10,7 @@ export const Footer = () => {
             <li>Sources</li>
             <li>Sources</li>
         </ul>
-        <div className={styles.copyright}><span>MusakaSoft &copy;</span></div>
+        <div className={styles.copyright}><span>MusakaSoft &copy; 2024</span></div>
         </>
         
     )

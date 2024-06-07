@@ -5,9 +5,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .container-green,
 .container-yellow,
-.container-red,
+.container-orange,
 .container-no {
     margin: auto;
     max-width: 100vw;
@@ -21,9 +22,10 @@
         'isEdible isEdible'
         '. .';
 }
+
 .container-green .column-card,
 .container-yellow .column-card,
-.container-red .column-card,
+.container-orange .column-card,
 .container-no .column-card {
     border-radius: 8px;
     padding: 2rem 2rem 2.3rem 2rem;
@@ -33,9 +35,10 @@
     gap: 1rem;
     text-align: start;
 }
+
 .container-green .column-card.isEdible,
 .container-yellow .column-card.isEdible,
-.container-red .column-card.isEdible, 
+.container-orange .column-card.isEdible,
 .container-no .column-card.isEdible {
     font-weight: bolder;
     margin: auto;
@@ -43,9 +46,10 @@
     font-size: 2rem;
     padding: 1rem 2rem 1rem 2rem;
 }
+
 .container-green h3,
 .container-yellow h3,
-.container-red h3,
+.container-orange h3,
 .container-no h3 {
     font-weight: bold;
     font-style: italic;
@@ -53,90 +57,125 @@
     text-align: center;
     margin-bottom: 1.5rem;
 }
+
 .container-green .source a:hover,
 .container-yellow .source a:hover,
-.container-red .source a:hover,
+.container-orange .source a:hover,
 .container-no .source a:hover {
     font-weight: bold;
 }
 
 /* Green version */
 .container-green {
-    color: #F7F6BB;
+    /* color: #F7F6BB; */
 }
+
 .container-green .column-card {
-    background-color: #526714;
+    background-color: var(--bg-high-reco);
 }
-.container-green .column-card.isEdible {
-    color: #F7F6BB;
-}
-.container-green h3 {
-    color: #F7F6BB;
-}
-.container-green .source {
-    color: #FCDC2A;
-}
-.container-green .source a:hover {
-    color: #114232;
-}
+
 .container-green .veggieName {
-    color: #FCDC2A;
+    color: var(--font-dark);
+}
+
+.container-green h3,
+.container-green .isEdible {
+    /* color: #F7F6BB; */
+    color: var(--accent-main);
+}
+
+.container-green .source {
+    color: var(--accent-main);
+}
+
+.container-green .source a:hover {
+    color: var(--font-dark);
+    border-bottom: 4px dotted var(--accent-main);
+    /* border-radius: 16px; */
 }
 
 /* Yellow version */
 .container-yellow {
-    color: #114232;
-}
-.container-yellow .column-card {
-    background-color: #FCDC2A;
-}
-.container-yellow .column-card.isEdible {
-    color: rgb(175, 88, 8);
-}
-.container-yellow h3 {
-    color: rgb(175, 88, 8);
-}
-.container-yellow .source a:hover {
-    color: rgb(175, 88, 8);
-}
-.container-yellow .veggieName {
-    color: #114232;
+    /* color: #114232; */
 }
 
-/* Red version */
-.container-red {
-    color: #F7F6BB;
+.container-yellow .column-card {
+    background-color: var(--bg-medium-reco);
 }
-.container-red .column-card {
-    background-color: #FA7070;
+
+.container-yellow h3,
+.container-yellow .isEdible {
+    color: var(--font-dark-accent);
 }
-.container-red h3 {
-    color: #ffe65c;
+
+.container-yellow .veggieName {
+    /* color: #114232; */
+    color: var(--font-dark);
 }
-.container-red .source a:hover {
-    color: #114232;
+
+.container-yellow .source {
+    color: var(--font-dark-accent);
 }
-.container-red .veggieName {
-    color: #F7F6BB;
+
+.container-yellow .source a:hover {
+    color: var(--font-dark);
+    border-bottom: 4px dotted var(--font-dark-accent);
+
 }
+
+
+/* Orange version */
+.container-orange {
+    /* color: #F7F6BB; */
+}
+
+.container-orange .column-card {
+    background-color: var(--bg-low-reco);
+}
+
+.container-orange h3, 
+.container-orange .isEdible {
+    /* color: var(--font-dark-accent); */
+    color: var(--font-dark-accent);
+}
+.container-orange .veggieName {
+    /* color: #F7F6BB; */
+    color: var(--font-dark);
+}
+
+.container-orange .source {
+    color: var(--font-dark-accent);
+}
+
+.container-orange .source a:hover {
+    color: var(--font-dark);
+    border-bottom: 4px dotted var(--font-dark-accent);
+}
+
+
 
 /* No answer version */
 .container-no {
     color: #F7F6BB;
     text-align: center;
 }
+
 .container-no .column-card {
-    background-color: #FA7070;
+    background-color: var(--bg-not-reco);
 }
+
 .container-no h3 {
     color: #ffe65c;
 }
-.container-no .column-card.isEdible{
+
+.container-no .column-card.isEdible {
     color: #F7F6BB;
 }
+
 .container-no .source {
     color: #FCDC2A;
 }
+
 .container-no .source a:hover {
     color: #114232;
 }
@@ -145,9 +184,11 @@
 .howMuch {
     grid-area: howMuch;
 }
+
 .isEdible {
     grid-area: isEdible;
 }
+
 .recoNotes {
     grid-area: recoNotes;
 }

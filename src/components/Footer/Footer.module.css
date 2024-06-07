@@ -9,14 +9,14 @@
     gap: 2rem;
     margin-top: auto;
     width: 100%;
-    background-color: var(--medium-blue);
-    color: var(--font-light);
+    background-color: var(--accent-secondary);
+    color: var(--font-dark);
 }
 
 .copyright {
     font-family: Caveat, sans-serif;
-    background-color: var(--light-blue);
-    color: var(--font-light);
+    background-color: var(--accent-secondary);
+    color: var(--font-dark);
     font-size: 1.2rem;
     text-align: center;
     padding: 0.2rem 1rem 0.2rem 1rem;
