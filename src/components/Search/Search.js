@@ -1,6 +1,7 @@
-import Select, { createFilter } from 'react-select';
+import Select, { createFilter, components } from 'react-select';
 import styles from './Search.module.css'
-import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 export const Search = ({
     setCurrentlySelected,
@@ -9,45 +10,59 @@ export const Search = ({
 }) => {
 
     // Styling react-select
-    const lightGreenColored = (styles,state) => ({
+    const lightGreenColored = (styles, state) => ({
         ...styles, color: "#87A922"
     });
-    const lightGreenColoredHover = (styles, state) => ({
-        ...styles, 
-        color: "#87A922",
-        "&:hover": {
-            color: "#114232"
-        }
-    });
+
+    const FaSearch = () => {
+        return <FontAwesomeIcon icon={faCaretDown} />;
+    };
+
+    const DropdownIndicator = (props) => {
+        return (
+            <components.DropdownIndicator {...props}>
+                <FaSearch />
+            </components.DropdownIndicator>
+        );
+    };
 
     const selectStyles = {
         control: (styles, state) => ({
             ...styles,
             textAlign: "center",
-            backgroundColor: "whitesmoke",
+            backgroundColor: "pink",
             minWidth: "30vw",
-            borderRadius: "12px",
+            borderRadius: "34px",
+            border: "none",
             "&:hover": {
-                border: "1px solid #87A922"
+               
             },
-            borderColor: `${state.isFocused ? "#87A922":"grey"}`
+            borderColor: `${state.isFocused ? "#87A922" : "grey"}`
         }),
         clearIndicator: (styles, state) => ({
-            ...styles, 
+            ...styles,
             paddingLeft: "0",
             color: "var(--medium-blue)",
             "&:hover": {
                 color: "var(--light-blue-secondary)"
             }
         }),
-        dropdownIndicator: lightGreenColoredHover,
+        dropdownIndicator: (styles, state) => ({
+            ...styles,
+            color: "#87A922",
+            fontSize: "1.5rem",
+            padding: "1rem",
+            "&:hover": {
+                color: "#114232"
+            }
+        }),
         input: (styles, state) => ({
-            ...styles, 
+            ...styles,
             margin: "auto",
             color: "#87A922",
         }),
         menu: (styles, state) => ({
-            ...styles, 
+            ...styles,
             backgroundColor: "whitesmoke",
         }),
         menuList: (styles, state) => ({
@@ -65,19 +80,16 @@ export const Search = ({
             }
         }),
         option: (styles, state) => ({
-            ...styles, 
-            
+            ...styles,
             backgroundColor: `${state.isFocused && "#F7F6BB"}`,
-            color: "#87A922",
             "&:hover": {
                 backgroundColor: "#87A922",
                 color: "#F7F6BB",
             }
         }),
         singleValue: lightGreenColored
-        
-
     }
+
     return (
         <div className={styles['container']}>
             <Select
@@ -86,10 +98,11 @@ export const Search = ({
                 options={options}
                 onChange={setCurrentlySelected}
                 styles={selectStyles}
-                placeholder={'Can my guinea pig eat...'}
+                placeholder={'Can my piggie eat it?'}
+                components={{DropdownIndicator}}
                 // filterOption={createFilter({ matchFrom: "any" })}
                 noOptionsMessage={() => `We don't know about that one yet :/`}
-                
+
             />
         </div>
 

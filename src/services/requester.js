@@ -38,7 +38,6 @@ export const request = async (method, url, data, token) => {
         };
 
     } else {
-        console.log(response.status);
 
         return result;
     }

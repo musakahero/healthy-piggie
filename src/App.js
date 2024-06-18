@@ -24,7 +24,7 @@ function App() {
           <Route path="/pop-edible" element={<PopEdible />}></Route>
           <Route path="/pop-toxic" element={<PopToxic />}></Route>
           <Route path="/combos" element={<Combos />}></Route>
-          <Route path="/add" element={<Create />}></Route>
+          {/* <Route path="/add" element={<Create />}></Route> */}
           <Route path="/*" element={<NotFound />}></Route>
         </Routes>
       </main>

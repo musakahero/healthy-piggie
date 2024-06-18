@@ -4,7 +4,6 @@ import styles from './Results.module.css'
 export const Results = ({
     resultItem
 }) => {
-
     return (
         <>
             {resultItem.isEdible && resultItem.recommendation === "High" ?

@@ -5,7 +5,6 @@
 //     let { data: veggies, error } = await supabase
 //   .from('veggies')
 //   .select('*');
-//   console.log(`data returns `);
 //   return veggies;
 // }
 

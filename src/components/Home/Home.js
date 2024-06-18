@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Results } from '../Results/Results';
 import styles from './Home.module.css';
-import * as veggiesService from '../../services/veggiesService';
+import * as veggiesService from '../../services/veggiesServiceSupabase';
 import { useSearch } from '../../hooks/useSearch';
 import { Search } from '../Search/Search';
 import { PopSearches } from '../PopSearches/PopSearches';
 import { Loading } from '../Loading/Loading';
-import { Loading2 } from '../Loading2/Loading2';
+// import { Loading2 } from '../Loading2/Loading2';
 
 export const Home = (props) => {
     const [allVeggies, setAllVeggies] = useState([]);
@@ -21,11 +21,9 @@ export const Home = (props) => {
     // Fetch all veggies
     useEffect(() => {
         setShowLoading(true);
-        console.log('set to true');
         veggiesService.getAll()
             .then(result => {
                 setAllVeggies(result);
-                console.log(result);
             })
             .then(() => setShowLoading(false))
             .catch(err => alert(new Error("Unable to reach our piggie base, please retry later!").message));
