@@ -34,9 +34,6 @@ export const Home = (props) => {
         <>
             {showLoading ? <div className={styles["spinner-container"]}><Loading /></div>
                 : <>
-                    {/* //Introductory paragraph */}
-                    <p className={styles.intro}>You're about to feed your piggie with a special treat? Check here if it's a good idea!</p>
-
                     {/* //Search component */}
                     <Search
                         setCurrentlySelected={setCurrentlySelected}

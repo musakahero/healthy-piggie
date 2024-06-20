@@ -2,7 +2,7 @@ import Select, { createFilter, components } from 'react-select';
 import styles from './Search.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
-
+import piggyImg from './Piggy-site.svg';
 export const Search = ({
     setCurrentlySelected,
     options,
@@ -10,9 +10,6 @@ export const Search = ({
 }) => {
 
     // Styling react-select
-    const lightGreenColored = (styles, state) => ({
-        ...styles, color: "#87A922"
-    });
 
     const FaSearch = () => {
         return <FontAwesomeIcon icon={faCaretDown} />;
@@ -30,40 +27,44 @@ export const Search = ({
         control: (styles, state) => ({
             ...styles,
             textAlign: "center",
-            backgroundColor: "pink",
-            minWidth: "30vw",
+            backgroundColor: "whitesmoke",
+            minWidth: "30rem",
             borderRadius: "34px",
             border: "none",
-            "&:hover": {
-               
-            },
-            borderColor: `${state.isFocused ? "#87A922" : "grey"}`
+            borderColor: `${state.isFocused ? "#87A922" : "grey"}`,
+            boxShadow: "3px 5px 5px 0px grey"
+
         }),
         clearIndicator: (styles, state) => ({
             ...styles,
+            padding: "0.5rem",
             paddingLeft: "0",
-            color: "var(--medium-blue)",
+            color: "var(--accent-main)",
             "&:hover": {
                 color: "var(--light-blue-secondary)"
             }
         }),
         dropdownIndicator: (styles, state) => ({
             ...styles,
-            color: "#87A922",
+            color: "whitesmoke",
             fontSize: "1.5rem",
-            padding: "1rem",
+            padding: "1.4rem",
             "&:hover": {
-                color: "#114232"
-            }
+                color: "var(--bg-main)"
+            },
+            backgroundColor: "var(--accent-main)",
+            borderTopRightRadius: "36px",
+            borderBottomRightRadius: "36px"
         }),
         input: (styles, state) => ({
             ...styles,
             margin: "auto",
-            color: "#87A922",
+            color: "var(--accent-main)",
+            marginLeft: "0.5rem"
         }),
         menu: (styles, state) => ({
             ...styles,
-            backgroundColor: "whitesmoke",
+            backgroundColor: "whitesmoke"
         }),
         menuList: (styles, state) => ({
             ...styles,
@@ -82,28 +83,42 @@ export const Search = ({
         option: (styles, state) => ({
             ...styles,
             backgroundColor: `${state.isFocused && "#F7F6BB"}`,
+            color: "var(--accent-main)",
             "&:hover": {
-                backgroundColor: "#87A922",
-                color: "#F7F6BB",
+                backgroundColor: "var(--accent-main)",
+                color: "whitesmoke",
             }
         }),
-        singleValue: lightGreenColored
+        singleValue: (styles, state) => ({
+            ...styles,
+            color: "var(--accent-main)",
+        }),
+        indicatorSeparator: (styles, state) => ({}), //This removes the separator styles
+        placeholder: (styles, state) => ({
+            ...styles,
+            color: "var(--accent-main)",
+            margin: "0 1rem",
+        })
+
     }
 
     return (
         <div className={styles['container']}>
+            <h1 className={styles["heading"]}>Search food</h1>
+            <h2 className={styles["sub-heading"]}>Search the food to check whether it's safe for your piggy to eat</h2>
             <Select
+                className={styles['react-select-component']}
                 value={currentlySelected}
                 isClearable={true}
                 options={options}
                 onChange={setCurrentlySelected}
                 styles={selectStyles}
-                placeholder={'Can my piggie eat it?'}
-                components={{DropdownIndicator}}
+                placeholder={'Type here...'}
+                components={{ DropdownIndicator }}
                 // filterOption={createFilter({ matchFrom: "any" })}
-                noOptionsMessage={() => `We don't know about that one yet :/`}
-
+                noOptionsMessage={() => `Our piggies have not tasted that yet :/`}
             />
+            <img src={piggyImg} alt="" className={styles["piggy-img"]}/>
         </div>
 
     )

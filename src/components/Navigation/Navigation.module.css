@@ -28,9 +28,8 @@
     display: flex;
     justify-content: space-between;
     gap: 3rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     /* font-family: "Caveat", cursive; */
     font-optical-sizing: auto;
-    font-weight: bolder;
     font-style: normal;
 }

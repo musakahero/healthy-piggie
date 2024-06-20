@@ -1,15 +1,47 @@
 .container {
-    font-family: Caveat, Arial, Helvetica, sans-serif;
-    padding: 3rem 2rem 3rem 2rem;
-    font-size: 2.5rem;
-    font-weight: 700;
-    /* border-radius: 8px; */
+    position: relative;
+    background-color: var(--bg-secondary);
+    color: var(--font-dark);
+    padding: 4rem 5rem 5rem 5rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    /* background-color: #FCDC2A; */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    /* gap: 1rem; */
+    min-width: 60rem;
+    width: 53vw;
+    margin: 5rem auto 1.5rem auto;
+    border-radius: 64px;
+    box-shadow: 3px 5px 5px 0px grey;
+    background-image: url("./Yellow-rectangle-site-01.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-weight: 700;
+}
+.container .piggy-img {
+    position: absolute;
+    width: 25rem;
+    /* height: 30vw; */
+    /* max-width: 30vw; */
+    top: 0rem;
+    right:-1rem;
 
+}
+.container .heading {
+    font-size: 3.5rem;
+    /* margin-left: 0.5rem; */
+    font-weight: 700;
+
+}
+.container .sub-heading {
+    font-size: 1rem;
+    /* margin-left: 0.5rem; */
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+.container .react-select-component {
+    font-family: Caveat, Arial, Helvetica, sans-serif;
+    font-weight: "800";
 }
 
 /* responsiveness */
