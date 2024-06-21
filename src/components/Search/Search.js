@@ -1,8 +1,6 @@
 import Select, { createFilter, components } from 'react-select';
 import styles from './Search.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import piggyImg from './Piggy-site.svg';
+import piggyImg from './images/Piggy-site.svg';
 export const Search = ({
     setCurrentlySelected,
     options,
@@ -10,29 +8,20 @@ export const Search = ({
 }) => {
 
     // Styling react-select
-
-    const FaSearch = () => {
-        return <FontAwesomeIcon icon={faCaretDown} />;
-    };
-
-    const DropdownIndicator = (props) => {
-        return (
-            <components.DropdownIndicator {...props}>
-                <FaSearch />
-            </components.DropdownIndicator>
-        );
-    };
-
     const selectStyles = {
         control: (styles, state) => ({
             ...styles,
             textAlign: "center",
             backgroundColor: "whitesmoke",
-            minWidth: "30rem",
+            minWidth: "23rem",
+            maxWidth: "23rem",
+            height: "4rem",
             borderRadius: "34px",
             border: "none",
-            borderColor: `${state.isFocused ? "#87A922" : "grey"}`,
-            boxShadow: "3px 5px 5px 0px grey"
+            borderColor: `${state.isFocused ? "#red" : "grey"}`,
+            padding: "0 2.5rem 0 1rem",
+            // boxShadow: `${state.isFocused && `0 0 0 1px orange`}`
+            boxShadow: "none",
 
         }),
         clearIndicator: (styles, state) => ({
@@ -41,30 +30,20 @@ export const Search = ({
             paddingLeft: "0",
             color: "var(--accent-main)",
             "&:hover": {
-                color: "var(--light-blue-secondary)"
+                color: "var(--accent-main)"
             }
-        }),
-        dropdownIndicator: (styles, state) => ({
-            ...styles,
-            color: "whitesmoke",
-            fontSize: "1.5rem",
-            padding: "1.4rem",
-            "&:hover": {
-                color: "var(--bg-main)"
-            },
-            backgroundColor: "var(--accent-main)",
-            borderTopRightRadius: "36px",
-            borderBottomRightRadius: "36px"
         }),
         input: (styles, state) => ({
             ...styles,
             margin: "auto",
             color: "var(--accent-main)",
-            marginLeft: "0.5rem"
         }),
         menu: (styles, state) => ({
             ...styles,
-            backgroundColor: "whitesmoke"
+            borderRadius: "64px",
+            overflow: "hidden",
+            width: "21.5rem",
+            fontSize: "2rem"
         }),
         menuList: (styles, state) => ({
             ...styles,
@@ -77,28 +56,29 @@ export const Search = ({
             },
             "::-webkit-scrollbar-thumb": {
                 borderRadius: "8px",
-                backgroundColor: "#114232"
+                backgroundColor: "var(--accent-main)"
             }
         }),
         option: (styles, state) => ({
             ...styles,
-            backgroundColor: `${state.isFocused && "#F7F6BB"}`,
+            backgroundColor: `${state.isFocused && "var(--bg-secondary)"}`,
             color: "var(--accent-main)",
             "&:hover": {
                 backgroundColor: "var(--accent-main)",
                 color: "whitesmoke",
-            }
+            },
         }),
         singleValue: (styles, state) => ({
             ...styles,
-            color: "var(--accent-main)",
+            color: "var(--accent-main)"
         }),
-        indicatorSeparator: (styles, state) => ({}), //This removes the separator styles
         placeholder: (styles, state) => ({
             ...styles,
             color: "var(--accent-main)",
             margin: "0 1rem",
-        })
+            display: state.isFocused && 'none',
+        }),
+
 
     }
 
@@ -106,19 +86,25 @@ export const Search = ({
         <div className={styles['container']}>
             <h1 className={styles["heading"]}>Search food</h1>
             <h2 className={styles["sub-heading"]}>Search the food to check whether it's safe for your piggy to eat</h2>
-            <Select
-                className={styles['react-select-component']}
-                value={currentlySelected}
-                isClearable={true}
-                options={options}
-                onChange={setCurrentlySelected}
-                styles={selectStyles}
-                placeholder={'Type here...'}
-                components={{ DropdownIndicator }}
-                // filterOption={createFilter({ matchFrom: "any" })}
-                noOptionsMessage={() => `Our piggies have not tasted that yet :/`}
-            />
-            <img src={piggyImg} alt="" className={styles["piggy-img"]}/>
+            <div className={styles['select-container']}>
+                <Select
+                    className={styles['react-select-component']}
+                    value={currentlySelected}
+                    isClearable={true}
+                    options={options}
+                    onChange={setCurrentlySelected}
+                    styles={selectStyles}
+                    placeholder={'Type here...'}
+                    components={{
+                        //Remove components by passing funcs returning null
+                        DropdownIndicator: () => null,
+                        IndicatorSeparator: () => null,
+                    }}
+                    noOptionsMessage={() => `Our piggies haven't tasted this food yet :/`}
+                />
+                <div className={styles["bitten"]}></div>
+            </div>
+            <img src={piggyImg} alt="A Guinea pig drawing" className={styles["piggy-img"]} />
         </div>
 
     )

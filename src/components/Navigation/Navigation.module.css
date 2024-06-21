@@ -22,12 +22,13 @@
 .nav .logo-container:hover, .nav .nav-items-container .nav-item:hover{
     scale: 1.1;
     transition-duration: 0.2s;
+    font-weight: 600;
 }
 .nav-items-container {
     /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
-    gap: 3rem;
+    gap: 4rem;
     font-size: 1.3rem;
     /* font-family: "Caveat", cursive; */
     font-optical-sizing: auto;

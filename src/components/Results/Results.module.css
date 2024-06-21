@@ -1,8 +1,6 @@
 /* Shared styles */
 .source {
-    /* font-style: italic; */
     font-weight: 700;
-    /* overflow: hidden; */
     text-overflow: ellipsis;
     margin: 1rem auto;
     padding: 0.3rem 1rem;
@@ -16,7 +14,7 @@
 .container-orange,
 .container-no {
     margin: auto;
-    max-width: 90vw;
+    max-width: 80vw;
     font-size: 1.4rem;
     padding: 2rem 4rem;
     display: flex;
@@ -30,13 +28,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* gap: 0.5rem; */
     text-align: start;
     font-weight: 500;
     /* coloring */
     color: var(--font-dark);
 }
 
+.column-card:last-child {
+    padding-bottom: 1rem;
+}
 .column-card.isEdible {
     font-weight: bolder;
     margin: auto;
@@ -68,7 +68,8 @@ h3 {
 .container-green .isEdible {
     background-color: var(--bg-high-reco);
 }
-.container-green .column-card:not(.isEdible) .veggieName  {
+
+.container-green .column-card:not(.isEdible) .veggieName {
     color: var(--bg-high-reco);
 }
 
@@ -89,28 +90,62 @@ h3 {
 .container-yellow .column-card {
     border: 5px solid var(--bg-medium-reco);
 }
+
 .container-yellow .isEdible {
     background-color: var(--bg-medium-reco);
 }
-.container-yellow .column-card:not(.isEdible) .veggieName  {
+
+.container-yellow .column-card:not(.isEdible) .veggieName {
     color: var(--bg-medium-reco);
 }
-.container-yellow .column-card.caution-badge {
+
+.container-yellow .caution-badge {
+    padding: 0.2rem 6rem 0.2rem 6rem;
+    margin: -0.5rem auto 0.5rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 64px;
+    font-weight: 600;
     /* coloring */
     background-color: var(--bg-medium-reco);
-    padding: 0rem 6rem;
-    margin: -0.5rem auto 0.5rem auto;
-}
-.caution-icon {
-    height: 1.5rem;
-}
-.caution-text {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-weight: 600;
     color: whitesmoke;
-    justify-content: center;
+}
+
+.info-icon {
+    font-size: 1.2rem;
+    margin-left: 0.2rem;
+}
+
+.caution-item {
+    position: relative;  
+}
+.caution-item:hover {
+    color: var(--accent-main);
+    cursor:help;
+}
+
+.tooltipText {
+    visibility: hidden;
+    width: 15rem;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    background-color: rgba(0, 0, 0, 0.708);
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    margin-right: 0.5rem;
+    border-radius: 64px;
+    border-top-left-radius: 2px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 100%;
+}
+
+.caution-item:hover .tooltipText {
+    visibility: visible;
 }
 
 .container-yellow .source {
@@ -133,7 +168,8 @@ h3 {
 .container-no .isEdible {
     background-color: var(--bg-not-reco);
 }
-.container-no .column-card:not(.isEdible) .veggieName  {
+
+.container-no .column-card:not(.isEdible) .veggieName {
     color: var(--bg-not-reco);
 }
 

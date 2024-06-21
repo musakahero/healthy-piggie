@@ -8,7 +8,6 @@ import { Combos } from './components/Combos/Combos';
 import { Footer } from './components/Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWheatAwnCircleExclamation } from '@fortawesome/free-solid-svg-icons';
-import { Create } from './components/Create/Create';
 import { NotFound } from './components/NotFound/NotFound';
 import CookieConsent from "react-cookie-consent";
 
@@ -30,19 +29,27 @@ function App() {
       </main>
       <Footer />
       <CookieConsent
-      debug={true}
-      contentStyle={
-        {fontSize:"1.3rem"}
-      }
-      style={{
-        alignItems:"center",
-        backgroundColor:"rgba(0, 0, 0, 0.84)"
-      }}
-      buttonStyle={{
-        fontSize:"1.4rem"
-      }}
+      buttonClasses={styles.acceptBtn}
+        debug={true}
+        contentStyle={
+          { fontSize: "1.3rem" }
+        }
+        style={{
+          alignItems: "center",
+          backgroundColor: "rgba(0, 0, 0, 0.84)"
+        }}
+        buttonStyle={{
+          backgroundColor: "var(--bg-secondary)",
+          color:"var(--accent-main)",
+          fontSize: "1.4rem",
+          fontWeight:"500",
+          borderRadius: "64px",
+          padding: "0.5rem 1rem"
+          
+        }}
+        
       >We collect cookies to analyze our website traffic and performance; we never collect any personal data.</CookieConsent>
-      
+
     </div>
   );
 }

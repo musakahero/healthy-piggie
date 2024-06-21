@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './Results.module.css'
-import { ReactComponent as Warning } from './Attention-icon-site-new.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 export const Results = ({
     resultItem
 }) => {
@@ -13,10 +14,19 @@ export const Results = ({
         serving1,
         source1,
         serving2,
-        source2,
-        searchCount } = resultItem;
+        source2 } = resultItem;
 
-    console.log(serving2);
+    // Content for Caution badge on Yellow view
+    let cautionList = [];
+    if (caution) {
+        cautionList = caution.split(', ');
+    };
+    const cautionTypes = {
+        'High sugar content': 'Overconsumption can lead to obesity and diabetes.',
+        'High water content': 'Overconsumption can cause diarrhea.',
+        'High oxalic acid content': 'Overconsumption can lead to mouth sores and diarrhea.',
+        'High calcium content': 'Overconsumption can cause a urinary infection & kidney stones to your guinea pig.'
+    }
 
     return (
         <>
@@ -34,8 +44,16 @@ export const Results = ({
                 </div>
                 {/* if Edible & Medium reco show warning column card */}
                 {isEdible && recommendation === "Medium" &&
-                    <div className={`${styles["column-card"]} ${styles["caution-badge"]}`}>
-                        <p className={styles['caution-text']}><Warning className={styles['caution-icon']}/>{caution}</p>
+                    <div className={`${styles["caution-badge"]}`}>
+                        {
+                            cautionList.map((c, index) =>
+                                <div key={index} className={styles['caution-item']}>
+                                    {c} {
+                                        <FontAwesomeIcon
+                                            icon={faInfoCircle}
+                                            className={styles['info-icon']} />}
+                                    <div className={styles['tooltipText']}>{cautionTypes[c]}</div>
+                                </div>)}
                     </div>
                 }
 
@@ -57,24 +75,6 @@ export const Results = ({
                         </> : null}
                 </div>
             </div>
-
-
-
-
-            {/* not reco
-            <div className={styles["container-no"]}>
-                <div className={`${styles["column-card"]} ${styles["isEdible"]}`}>
-                    <p>No, guinea pigs can't eat <span className={styles.veggieName}>{resultItem.veggieName}</span></p>
-
-                </div>
-                <div className={`${styles["column-card"]}`}>
-                    {resultItem.recommendationNotes}
-                    <p className={styles.source}
-                    >
-                        <Link target={"_blank"} to={`${resultItem.source1}`}>Source: Click me!</Link></p>
-                </div>
-            </div> */}
-
         </>
     )
 }
