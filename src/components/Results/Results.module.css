@@ -7,6 +7,8 @@
     border-radius: 64px;
     font-size: 1.2rem;
     cursor: pointer;
+    color: var(--font-search-light);
+
 }
 
 .container-green,
@@ -44,11 +46,11 @@
     font-size: 2rem;
     padding: 0.5rem 2rem 0.5rem 2rem;
     /* coloring */
-    color: whitesmoke;
+    color: var(--font-search-light);
 }
 
 .isEdible .veggieName {
-    color: whitesmoke;
+    color: var(--font-search-light);
     font-weight: 600;
 }
 
@@ -75,13 +77,13 @@ h3 {
 
 .container-green .source {
     background-color: var(--bg-high-reco);
-    color: whitesmoke;
+    /* color: var(--font-light); */
     border: 2px solid var(--bg-high-reco);
 
 }
 
 .container-green .source:hover {
-    background-color: whitesmoke;
+    background-color: var(--bg-main);
     color: var(--bg-high-reco);
     border: 2px solid var(--bg-high-reco);
 }
@@ -110,7 +112,7 @@ h3 {
     font-weight: 600;
     /* coloring */
     background-color: var(--bg-medium-reco);
-    color: whitesmoke;
+    color: var(--font-light);
 }
 
 .info-icon {
@@ -122,7 +124,7 @@ h3 {
     position: relative;  
 }
 .caution-item:hover {
-    color: var(--accent-main);
+    color: var(--font-dark);
     cursor:help;
 }
 
@@ -131,7 +133,7 @@ h3 {
     width: 15rem;
     padding: 0.5rem 1rem 0.5rem 0.5rem;
     background-color: rgba(0, 0, 0, 0.708);
-    color: whitesmoke;
+    color: var(--font-search-light);
     font-size: 1rem;
     font-weight: 300;
     text-align: center;
@@ -150,13 +152,13 @@ h3 {
 
 .container-yellow .source {
     background-color: var(--bg-medium-reco);
-    color: whitesmoke;
+    /* color: var(--font-light); */
     border: 2px solid var(--bg-medium-reco);
 }
 
 .container-yellow .source:hover {
     color: var(--bg-medium-reco);
-    background-color: whitesmoke;
+    background-color: var(--bg-main);
     border: 2px solid var(--bg-medium-reco);
 }
 
@@ -175,13 +177,13 @@ h3 {
 
 .container-no .source {
     background-color: var(--bg-not-reco);
-    color: whitesmoke;
+    /* color: var(--font-light); */
     border: 2px solid var(--bg-not-reco);
 }
 
 .container-no .source:hover {
     color: var(--bg-not-reco);
-    background-color: whitesmoke;
+    background-color: var(--bg-main);
     border: 2px solid var(--bg-not-reco);
 }
 

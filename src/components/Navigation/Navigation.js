@@ -8,8 +8,8 @@ export const Navigation = ({
     return (
         <nav className={styles['nav']}>
           <div className={styles['logo-container']}>
-            <i className={styles["logo-icon"]}>{logoIcon}</i>
-            <span className={styles["logo-title"]}><NavLink to="/">Healthy Piggie</NavLink></span>
+            {/* <i className={styles["logo-icon"]}>{logoIcon}</i> */}
+            <span className={styles["logo-title"]}><NavLink to="/">MY PIGGY EATS</NavLink></span>
           </div>
           <ul className={styles["nav-items-container"]}>
             <li className={styles["nav-item"]}><NavLink to="/pop-edible">Edible foods</NavLink></li>

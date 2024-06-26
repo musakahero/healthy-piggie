@@ -1,4 +1,4 @@
-import Select, { createFilter, components } from 'react-select';
+import Select from 'react-select';
 import styles from './Search.module.css'
 import piggyImg from './images/Piggy-site.svg';
 export const Search = ({
@@ -12,7 +12,7 @@ export const Search = ({
         control: (styles, state) => ({
             ...styles,
             textAlign: "center",
-            backgroundColor: "whitesmoke",
+            backgroundColor: "var(--bg-search)",
             minWidth: "23rem",
             maxWidth: "23rem",
             height: "4rem",
@@ -22,28 +22,30 @@ export const Search = ({
             padding: "0 2.5rem 0 1rem",
             // boxShadow: `${state.isFocused && `0 0 0 1px orange`}`
             boxShadow: "none",
+            cursor: "text"
 
         }),
         clearIndicator: (styles, state) => ({
             ...styles,
             padding: "0.5rem",
             paddingLeft: "0",
-            color: "var(--accent-main)",
+            color: "var(--font-search)",
             "&:hover": {
-                color: "var(--accent-main)"
+                color: "var(--font-search)"
             }
         }),
         input: (styles, state) => ({
             ...styles,
             margin: "auto",
-            color: "var(--accent-main)",
+            color: "var(--font-search)",
         }),
         menu: (styles, state) => ({
             ...styles,
             borderRadius: "64px",
             overflow: "hidden",
             width: "21.5rem",
-            fontSize: "2rem"
+            fontSize: "2rem",
+            backgroundColor: "var(--bg-main)"
         }),
         menuList: (styles, state) => ({
             ...styles,
@@ -52,29 +54,29 @@ export const Search = ({
             "::-webkit-scrollbar": {
                 borderRadius: "8px",
                 scrollbarWidth: "thin",
-                backgroundColor: "whitesmoke"
+                backgroundColor: "var(--bg-main)"
             },
             "::-webkit-scrollbar-thumb": {
                 borderRadius: "8px",
-                backgroundColor: "var(--accent-main)"
+                backgroundColor: "var(--font-dark)"
             }
         }),
         option: (styles, state) => ({
             ...styles,
-            backgroundColor: `${state.isFocused && "var(--bg-secondary)"}`,
-            color: "var(--accent-main)",
+            backgroundColor: `${state.isFocused && "var(--bg-option-focused)"}`,
+            color: "var(--font-dark)",
             "&:hover": {
                 backgroundColor: "var(--accent-main)",
-                color: "whitesmoke",
+                color: "var(--font-search-light)",
             },
         }),
         singleValue: (styles, state) => ({
             ...styles,
-            color: "var(--accent-main)"
+            color: "var(--font-search)"
         }),
         placeholder: (styles, state) => ({
             ...styles,
-            color: "var(--accent-main)",
+            color: "var(--font-search)",
             margin: "0 1rem",
             display: state.isFocused && 'none',
         }),

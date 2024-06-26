@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     padding: 0.5rem 2rem 0.5rem 2rem;
     background-color: var(--accent-main);
-    color: var(--font-light);
+    color: var(--font-light-secondary);
 }
 
 .nav .logo-container {
@@ -20,7 +20,7 @@
     font-style: normal;
 }
 .nav .logo-container:hover, .nav .nav-items-container .nav-item:hover{
-    scale: 1.1;
+    /* scale: 1.1; */
     transition-duration: 0.2s;
     font-weight: 600;
 }

@@ -52,6 +52,7 @@ export const Home = (props) => {
                             setCurrentlySelected={setCurrentlySelected}
                         />
                     </section>
+                    
                 </>}
         </>
     )

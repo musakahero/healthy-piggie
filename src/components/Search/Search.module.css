@@ -1,29 +1,31 @@
 .container {
     position: relative;
     background-color: var(--bg-secondary);
-    color: var(--font-dark);
+    color: var(--font-search);
     padding: 4rem 5rem 5rem 5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
     min-width: 60rem;
-    width: 50vw;
+    max-width: 35vw;
     margin: 5rem auto 1.5rem auto;
     border-radius: 64px;
     box-shadow: 3px 5px 5px 0px grey;
     background-image: url("./images/Yellow-rectangle-site-01.jpg");
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     font-weight: 700;
-    
+
 }
+
 .container .piggy-img {
     position: absolute;
     width: 25rem;
     top: 0rem;
-    right:-1rem;
+    right: -1rem;
 }
+
 .container .bitten {
     width: 5rem;
     height: 4rem;
@@ -36,16 +38,19 @@
     border-bottom-right-radius: 64px;
 
 }
+
 .container .heading {
     font-size: 3.5rem;
     font-weight: 700;
 
 }
+
 .container .sub-heading {
     font-size: 1rem;
     margin-bottom: 1.5rem;
     font-weight: 400;
 }
+
 .container .select-container {
     position: relative;
     display: flex;
@@ -53,15 +58,33 @@
     border-radius: 64px;
     width: 26rem;
 }
+
 .container .react-select-component {
     font-family: Caveat, Arial, Helvetica, sans-serif;
     font-weight: "800";
 }
 
 /* responsiveness */
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1024px) {
     .container {
-    /* border: red 1px solid; */
-    /* background-color: red; */
+        min-width: 35rem;
+
+    }
+
+    .container .piggy-img {
+        width: 15rem;
+        top: -2rem;
+        right: -1rem;
+    }
+
+    .container .heading {
+        font-size: 2.5rem;
+    }
+
+    .container .sub-heading {
+        font-size: 1rem;
+        width: 70%;
+        margin-bottom: 1.5rem;
+        font-weight: 400;
     }
 }

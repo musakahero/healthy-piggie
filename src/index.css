@@ -2,22 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* makes sizing simpler */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   background-size: contain;
-  /* color vars */
-  --accent-main: #124076;
-  --bg-main: whitesmoke;
-  --font-dark: #124076;
-  --font-dark-accent: #9e72f0;
-  --bg-high-reco: #39a935 ;
-  --bg-medium-reco: #f29100;
-  --bg-low-reco: #f29100;
-  --bg-not-reco: #e20613;
-  --bg-secondary: #fff59b;
-  /* --accent-secondary: #B8E8FC; */
-  --font-light: #fff59b;
 }
+
+
+
 /* *::-webkit-scrollbar {
   border-radius: 8px;
   background-color: #F7F6BB;
@@ -40,18 +33,21 @@
 
 /* dark mode user-agent-styles */
 html {
-  /* color-scheme: dark light; */
+  color-scheme: light;
 }
 
 /* min body height */
 body {
   /* min-height: 80vh; */
   /* background: linear-gradient(180deg, rgba(128,136,54,1) 50%, rgba(49,132,210,1) 100%); */
-  background-color: var(whitesmoke);
+  background-color: var(--bg-main);
 }
 
 /* responsive images/videos */
-img, picture, svg, video {
+img,
+picture,
+svg,
+video {
   display: block;
   max-width: 100%;
 }
@@ -61,7 +57,7 @@ ul {
   list-style-type: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }

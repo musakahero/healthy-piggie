@@ -20,7 +20,7 @@
     font-size: 2rem;
     font-weight: 700;
     background-color: var(--bg-main);
-    color: black;
+    color: var(--font-dark);
     font-family: Caveat, Arial, Helvetica, sans-serif;
 }
 .pop-questions li {
@@ -28,8 +28,9 @@
     font-style: italic;
 }
 
-.pop-questions li:hover {
-    color: var(--accent-main);
+.pop-questions li:hover a{
+    /* color: var(--font-light); */
+    border-bottom: 2px solid var(--font-dark);
 }
 
 .results {

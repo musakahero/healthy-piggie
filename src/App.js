@@ -10,10 +10,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWheatAwnCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { NotFound } from './components/NotFound/NotFound';
 import CookieConsent from "react-cookie-consent";
+import { useState } from 'react';
 
 function App() {
+  // Darkmode state
+  const [darkmode, setDarkmode] = useState(false);
+
   return (
-    <div className={styles["app"]}>
+    <div className={`${styles["app"]} ${darkmode && styles["dark-mode"]}`} id='top'>
       <header className={styles["app-header"]}>
         <Navigation logoIcon={<FontAwesomeIcon icon={faWheatAwnCircleExclamation} />} />
       </header>
@@ -27,9 +31,12 @@ function App() {
           <Route path="/*" element={<NotFound />}></Route>
         </Routes>
       </main>
-      <Footer />
+      <Footer
+        darkmode={darkmode}
+        setDarkmode={setDarkmode}
+      />
       <CookieConsent
-      buttonClasses={styles.acceptBtn}
+        buttonClasses={styles.acceptBtn}
         debug={true}
         contentStyle={
           { fontSize: "1.3rem" }
@@ -40,14 +47,14 @@ function App() {
         }}
         buttonStyle={{
           backgroundColor: "var(--bg-secondary)",
-          color:"var(--accent-main)",
+          color: "var(--accent-main)",
           fontSize: "1.4rem",
-          fontWeight:"500",
+          fontWeight: "500",
           borderRadius: "64px",
           padding: "0.5rem 1rem"
-          
+
         }}
-        
+
       >We collect cookies to analyze our website traffic and performance; we never collect any personal data.</CookieConsent>
 
     </div>

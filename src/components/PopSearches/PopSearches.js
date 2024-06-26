@@ -12,7 +12,8 @@ export const PopSearches = ({ allVeggies, setCurrentlySelected }) => {
         <ul className={styles["top-searches"]}> Most popular searches:
             {top5.map(i =>
                 <li key={i.id}>
-                    <Link className={styles['search-link']} onClick={() => {
+                    <Link className={styles['search-link']} 
+                    onClick={() => {
                         setCurrentlySelected(
                             {
                                 value: i.veggieName,
