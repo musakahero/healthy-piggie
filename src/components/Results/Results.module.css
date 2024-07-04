@@ -1,4 +1,8 @@
 /* Shared styles */
+.search-link:hover{
+    /* border-bottom: 2px solid var(--font-dark); */
+    color: var(--bg-medium-reco)
+}
 .source {
     font-weight: 700;
     text-overflow: ellipsis;

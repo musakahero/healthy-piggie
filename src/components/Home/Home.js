@@ -6,7 +6,6 @@ import { useSearch } from '../../hooks/useSearch';
 import { Search } from '../Search/Search';
 import { PopSearches } from '../PopSearches/PopSearches';
 import { Loading } from '../Loading/Loading';
-// import { Loading2 } from '../Loading2/Loading2';
 
 export const Home = (props) => {
     const [allVeggies, setAllVeggies] = useState([]);
@@ -16,7 +15,8 @@ export const Home = (props) => {
     const { options,
         resultItem,
         setCurrentlySelected,
-        currentlySelected } = useSearch(allVeggies);
+        currentlySelected,
+        similarCautionItems } = useSearch(allVeggies);
 
     // Fetch all veggies
     useEffect(() => {
@@ -40,11 +40,11 @@ export const Home = (props) => {
                         options={options}
                         currentlySelected={currentlySelected} />
 
-
                     {/* //Results section */}
                     <section className={styles.results}>
                         {/* //Show results section only if foundItem is not falsey */}
-                        {resultItem && <Results resultItem={resultItem} />}
+                        {resultItem && <Results resultItem={resultItem} similarCautionItems={similarCautionItems}
+                        setCurrentlySelected={setCurrentlySelected} />}
                     </section>
                     {/* // Most popular searches section */}
                     <section className={styles["pop-questions"]}>
@@ -52,7 +52,6 @@ export const Home = (props) => {
                             setCurrentlySelected={setCurrentlySelected}
                         />
                     </section>
-                    
                 </>}
         </>
     )

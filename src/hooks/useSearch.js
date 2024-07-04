@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import * as veggieService from '../services/veggiesServiceSupabase';
-
+import { compareItems } from '../utils/compareItems';
 export const useSearch = (array) => {
     const [currentlySelected, setCurrentlySelected] = useState(null);
     const [resultItem, setResultItem] = useState(null);
+    const [similarCautionItems, setSimilarCautionItems] = useState([]);
 
     //getOne request if currentlySelected is not falsey (null) 
     useEffect(() => {
@@ -26,6 +27,15 @@ export const useSearch = (array) => {
                     } else {
                         setResultItem(res); //for Supabase
                     }
+
+                    // Get similar items based on caution if item is Medium & Fruit
+                    if (resItem.foodType === 'Fruit' && resItem.recommendation === 'Medium') {
+                        setSimilarCautionItems(compareItems(resItem, array, 'Vegetable'));
+
+                        //Get similar items based on caution if item is Medium & Vegetable
+                    } else if (resItem.foodType === 'Vegetable' && resItem.recommendation === 'Medium'){
+                        setSimilarCautionItems(compareItems(resItem, array, 'Fruit'));
+                    }
                 })
                 .catch(err => alert(err));
         };
@@ -40,13 +50,14 @@ export const useSearch = (array) => {
                 id: i.id,
                 searchCount: i.searchCount
             }))]
-            //sort the options array alphabetically
-        .sort((a, b) => a.label.localeCompare(b.label)); 
+        //sort the options array alphabetically
+        .sort((a, b) => a.label.localeCompare(b.label));
 
     return {
         options,
         setCurrentlySelected,
         currentlySelected,
-        resultItem
+        resultItem,
+        similarCautionItems
     };
 }

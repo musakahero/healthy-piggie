@@ -4,7 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 export const Results = ({
-    resultItem
+    resultItem,
+    similarCautionItems,
+    setCurrentlySelected
 }) => {
     const {
         isEdible,
@@ -15,13 +17,9 @@ export const Results = ({
         serving1,
         source1,
         serving2,
-        source2 } = resultItem;
+        source2,
+        foodType } = resultItem;
 
-    // Content for Caution badge on Yellow view
-    let cautionList = [];
-    if (caution) {
-        cautionList = caution.split(', ');
-    };
     const cautionTypes = {
         'High sugar content': 'Overconsumption can lead to obesity and diabetes.',
         'High water content': 'Overconsumption can cause diarrhea.',
@@ -29,6 +27,8 @@ export const Results = ({
         'High calcium content': 'Overconsumption can cause a urinary infection & kidney stones to your guinea pig.'
     }
 
+    const foodLinksArray = similarCautionItems.map(i => i.veggieName);
+    console.log(foodLinksArray);
     return (
         <>
             {/* // High reco */}
@@ -47,7 +47,7 @@ export const Results = ({
                 {isEdible && recommendation === "Medium" &&
                     <div className={`${styles["caution-badge"]}`}>
                         {
-                            cautionList.map((c, index) =>
+                            caution.map((c, index) =>
                                 <div key={index} className={styles['caution-item']}>
                                     {c} {
                                         <FontAwesomeIcon
@@ -75,6 +75,50 @@ export const Results = ({
                             <p className={styles.source}><Link target={"_blank"} to={`${source2}`}>Source</Link></p>
                         </> : null}
                 </div>
+                {/* if Medium and foodType=Fruit show pairing reco */}
+                {recommendation === "Medium" && (foodType === "Fruit" || "Vegetable") &&
+                    <div className={styles["column-card"]}>
+                        <p>Does not pair well with other {foodType === "Fruit" ? 'fruits' : 'vegetables'}.</p>
+                        <div>
+                            <p>Does not pair well with {
+                                // Map items to Link components
+                                similarCautionItems.map(
+                                    (i, index) => {
+                                        // Add punctuation accordingly
+                                        if (similarCautionItems.length - 1 !== index) {
+                                            return <Link
+                                                key={i.id}
+                                                className={styles["search-link"]}
+                                                onClick={() => {
+                                                    setCurrentlySelected(
+                                                        {
+                                                            value: i.veggieName,
+                                                            label: i.veggieName,
+                                                            id: i.id,
+                                                            searchCount: i.searchCount
+                                                        });
+                                                }}
+                                            > {i.veggieName},</Link>
+                                        } else {
+                                            return <Link
+                                                key={i.id}
+                                                className={styles["search-link"]}
+                                                onClick={() => {
+                                                    setCurrentlySelected(
+                                                        {
+                                                            value: i.veggieName,
+                                                            label: i.veggieName,
+                                                            id: i.id,
+                                                            searchCount: i.searchCount
+                                                        });
+                                                }}
+                                            > {i.veggieName}.</Link>
+                                        }
+                                    })}
+                            </p>
+                        </div>
+                    </div>
+                }
             </div>
         </>
     )
