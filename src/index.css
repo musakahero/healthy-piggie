@@ -34,6 +34,8 @@
 /* dark mode user-agent-styles */
 html {
   color-scheme: light;
+  min-width: 90vw;
+
 }
 
 /* min body height */
@@ -41,6 +43,8 @@ body {
   /* min-height: 80vh; */
   /* background: linear-gradient(180deg, rgba(128,136,54,1) 50%, rgba(49,132,210,1) 100%); */
   background-color: var(--bg-main);
+  /* min-width: 100%; */
+  
 }
 
 /* responsive images/videos */

@@ -27,8 +27,6 @@ export const Results = ({
         'High calcium content': 'Overconsumption can cause a urinary infection & kidney stones to your guinea pig.'
     }
 
-    const foodLinksArray = similarCautionItems.map(i => i.veggieName);
-    console.log(foodLinksArray);
     return (
         <>
             {/* // High reco */}
@@ -76,9 +74,9 @@ export const Results = ({
                         </> : null}
                 </div>
                 {/* if Medium and foodType=Fruit show pairing reco */}
-                {recommendation === "Medium" && (foodType === "Fruit" || "Vegetable") &&
+                {recommendation === "Medium" && (foodType === "Fruit" || foodType === "Vegetable") &&
                     <div className={styles["column-card"]}>
-                        <p>Does not pair well with other {foodType === "Fruit" ? 'fruits' : 'vegetables'}.</p>
+                        {foodType === "Fruit" && <p>Does not pair well with other fruits.</p>}
                         <div>
                             <p>Does not pair well with {
                                 // Map items to Link components

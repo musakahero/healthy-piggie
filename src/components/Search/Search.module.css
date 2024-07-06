@@ -8,14 +8,15 @@
     justify-content: space-around;
     align-items: flex-start;
     min-width: 60rem;
-    max-width: 35vw;
+    max-width: 0;
     margin: 5rem auto 1.5rem auto;
     border-radius: 64px;
-    box-shadow: 3px 5px 5px 0px grey;
+    box-shadow: 3px 5px 5px 0px rgb(75, 44, 44);
     background-image: url("./images/Yellow-rectangle-site-01.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     font-weight: 700;
+    /* overflow: auto; */
 
 }
 
@@ -27,8 +28,9 @@
 }
 
 .container .bitten {
-    width: 5rem;
-    height: 4rem;
+    width: min(5rem, 25%);
+    height: 100%;
+    /* max-height: 100%; */
     position: absolute;
     right: 0rem;
     background-image: url(./images/Search-site-01.svg);
@@ -42,11 +44,14 @@
 .container .heading {
     font-size: 3.5rem;
     font-weight: 700;
+    /* border: 1px solid red; */
 
 }
 
 .container .sub-heading {
     font-size: 1rem;
+    /* border: 1px solid green; */
+
     margin-bottom: 1.5rem;
     font-weight: 400;
 }
@@ -56,35 +61,82 @@
     display: flex;
     box-shadow: -1px 11px 5px -8px grey;
     border-radius: 64px;
-    width: 26rem;
+    /* width: 26rem; */
+    width: 60%;
+    min-height: 3rem;
 }
 
 .container .react-select-component {
     font-family: Caveat, Arial, Helvetica, sans-serif;
     font-weight: "800";
+    width: 90%;
+    height: 100%;
 }
 
 /* responsiveness */
 @media screen and (max-width: 1024px) {
     .container {
-        min-width: 35rem;
-
+        min-width: 40rem;
     }
-
     .container .piggy-img {
-        width: 15rem;
-        top: -2rem;
-        right: -1rem;
+        width: 18rem;
+        top: 5.5rem;
+        right: -4rem;
     }
-
     .container .heading {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
-
     .container .sub-heading {
         font-size: 1rem;
+        width: 75%;
+    }
+    .container .select-container {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        min-width: 30rem;
+        padding: 1.5rem 2rem;
+    }
+    .container .piggy-img {
+        width: 10rem;
+        top: 3.5rem;
+        right: -1.6rem;
+    }
+    .container .heading {
+        font-size: 2rem;
+    }
+    .container .sub-heading {
+        font-size: 0.7rem;
+        width: 75%;
+    }
+    .container .select-container {
         width: 70%;
-        margin-bottom: 1.5rem;
-        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .container {
+        min-width: 20rem;
+
+    }
+    .container .heading {
+        font-size: 1.6rem;
+    }
+    .container .sub-heading{
+        font-size: 0.6rem;
+        width: 65%;
+    }
+    .container .piggy-img {
+        width: 9rem;
+        top: -2rem;
+        left: 11.3rem;
+    }
+    .container .select-container {
+        width: 100%;
+    }
+    .container .react-select-component {
     }
 }

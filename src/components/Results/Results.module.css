@@ -1,15 +1,15 @@
 /* Shared styles */
-.search-link:hover{
+.search-link:hover {
     /* border-bottom: 2px solid var(--font-dark); */
-    color: var(--bg-medium-reco)
+    color: var(--bg-medium-reco);
 }
+
 .source {
     font-weight: 700;
     text-overflow: ellipsis;
     margin: 1rem auto;
     padding: 0.3rem 1rem;
     border-radius: 64px;
-    font-size: 1.2rem;
     cursor: pointer;
     color: var(--font-search-light);
 
@@ -17,11 +17,12 @@
 
 .container-green,
 .container-yellow,
-.container-orange,
 .container-no {
     margin: auto;
     max-width: 80vw;
-    font-size: 1.4rem;
+    min-width: 20rem;
+    /* font-size: 1.4rem; */
+    font-size: clamp(0.9rem, 2.5vw, 1.4rem);
     padding: 2rem 4rem;
     display: flex;
     flex-direction: column;
@@ -29,6 +30,7 @@
 }
 
 .column-card {
+    min-width: 18rem;
     border-radius: 64px;
     padding: 2rem 2rem 2rem 2rem;
     display: flex;
@@ -43,11 +45,11 @@
 .column-card:last-child {
     padding-bottom: 1rem;
 }
+
 .column-card.isEdible {
     font-weight: bolder;
     margin: auto;
     text-align: center;
-    font-size: 2rem;
     padding: 0.5rem 2rem 0.5rem 2rem;
     /* coloring */
     color: var(--font-search-light);
@@ -60,8 +62,8 @@
 
 h3 {
     font-weight: bold;
-    /* font-style: italic; */
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+
     text-align: center;
     margin-bottom: 1.5rem;
 }
@@ -106,48 +108,52 @@ h3 {
 }
 
 .container-yellow .caution-badge {
-    padding: 0.2rem 6rem 0.2rem 6rem;
+    max-width: 80vw;
+    min-width: 15rem;
+    padding: 0.4rem 2rem 0.3rem 2rem;
     margin: -0.5rem auto 0.5rem auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: clamp(0rem, 2.0vw, 2rem);
     border-radius: 64px;
     font-weight: 600;
+    font-size: clamp(0.7rem, 2.5vw, 1.2rem);
     /* coloring */
     background-color: var(--bg-medium-reco);
     color: var(--font-light);
+
 }
 
 .info-icon {
-    font-size: 1.2rem;
     margin-left: 0.2rem;
 }
 
 .caution-item {
-    position: relative;  
+    position: relative;
 }
+
 .caution-item:hover {
     color: var(--font-dark);
-    cursor:help;
+    cursor: help;
 }
 
 .tooltipText {
     visibility: hidden;
-    width: 15rem;
-    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    width: clamp(7rem, 10vw, 15rem);
+    padding: 0.5rem;
     background-color: rgba(0, 0, 0, 0.708);
     color: var(--font-search-light);
-    font-size: 1rem;
+    font-size: clamp(0.7rem, 1.2vw, 1rem);
+    text-wrap: wrap;
     font-weight: 300;
-    text-align: center;
-    margin-right: 0.5rem;
-    border-radius: 64px;
+    border-radius: 16px;
     border-top-left-radius: 2px;
     position: absolute;
     z-index: 1;
-    top: 100%;
     left: 100%;
+
+
 }
 
 .caution-item:hover .tooltipText {
@@ -202,4 +208,34 @@ h3 {
 
 .recoNotes {
     grid-area: recoNotes;
+}
+
+@media screen and (max-width: 768px) {
+
+    .container-green,
+    .container-yellow,
+    .container-no {
+        padding: 2rem 1.5rem;
+    }
+    .source {
+        /* font-size: 0.7rem; */
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .container-green,
+    .container-yellow,
+    .container-no {
+        /* font-size: 0.9rem; */
+        padding: 0;
+    }
+    .container-yellow .caution-badge {
+        flex-direction: column;
+    }
+    .tooltipText {
+        /* padding: 0; */
+        /* left: 30%; */
+
+    }
 }

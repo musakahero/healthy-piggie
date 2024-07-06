@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     min-height: 65vh;
+    
 }
 
 /* Intro section */
@@ -12,12 +13,14 @@
     font-size: 1.8rem;
     padding: 3rem 5rem 3rem 5rem;
     color: black;
+
 }
 
 /* Most searched foods section */
 .pop-questions {
-    padding: 3rem 5rem 3rem 5rem;
-    font-size: 2rem;
+    /* border: 1px solid red; */
+    padding: 3rem 2rem 3rem 3rem;
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
     font-weight: 700;
     background-color: var(--bg-main);
     color: var(--font-dark);
@@ -38,7 +41,9 @@
     text-align: center;
 }
 
-/* responsiveness */
-@media screen and (min-width: 1280px){
-    
+@media screen and (max-width: 425px) {
+    .results {
+        padding: 0;
+    }
+
 }

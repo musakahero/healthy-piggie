@@ -1,15 +1,10 @@
-/* .container {
-    padding: 1rem 2rem 1rem 2rem;
-    font-size: 1.1rem;
-    display: flex;
-    justify-content: space-around;
-    gap: 2rem;
-    margin-top: auto;
-    width: 100%;
-    background-color: var(--accent-main);
-    color: var(--font-light-secondary);
-}
- */
+
+ .prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    /* -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);  */
+  }
 
 .footer-container {
     padding: 2rem 2rem 2rem 2rem;
@@ -33,11 +28,20 @@
     cursor: pointer;
     position: relative;
     display: inline-block;
+    -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+
 }
 
 .darkmode-btn .tooltiptext {
     visibility: hidden;
-    width: 10vw;
+    max-width: 10rem;
     background-color: rgba(0, 0, 0, 0.708);
     color: #fff;
     text-align: center;
@@ -47,8 +51,8 @@
     position: absolute;
     z-index: 1;
     bottom: 0vh;
-    right: 2vw;
-    font-size: 1.5rem;
+    right: 2.5rem;
+    font-size: clamp(1rem, 3.5vw, 2rem);
 }
 
 .darkmode-btn:hover .tooltiptext {
@@ -70,4 +74,14 @@
     font-size: 1.2rem;
     text-align: center;
     padding: 0.2rem 1rem 0.2rem 1rem;
+}
+
+@media (hover: none) {
+    .darkmode-btn:hover .tooltiptext {
+        visibility: hidden;
+    }
+
+    .darkmode-btn a:hover {
+        color: var(--font-dark);
+    }
 }

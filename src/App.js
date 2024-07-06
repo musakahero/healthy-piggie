@@ -38,21 +38,23 @@ function App() {
       <CookieConsent
         buttonClasses={styles.acceptBtn}
         debug={true}
-        contentStyle={
-          { fontSize: "1.3rem" }
-        }
         style={{
           alignItems: "center",
-          backgroundColor: "rgba(0, 0, 0, 0.84)"
+          backgroundColor: "rgba(0, 0, 0, 0.84)",
+          overflowX: "hidden"
         }}
+        contentStyle={
+          { fontSize: "clamp(1rem, 2.5vw, 1.5rem)",
+           }
+        }
+        
         buttonStyle={{
           backgroundColor: "var(--bg-secondary)",
           color: "var(--accent-main)",
-          fontSize: "1.4rem",
+          fontSize: "clamp(1rem, 2.5vw, 1.5rem)",
           fontWeight: "500",
           borderRadius: "64px",
           padding: "0.5rem 1rem"
-
         }}
 
       >We collect cookies to analyze our website traffic and performance; we never collect any personal data.</CookieConsent>

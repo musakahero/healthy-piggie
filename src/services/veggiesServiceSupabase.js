@@ -7,7 +7,6 @@ export const getAll = async () => {
         .select('*');
         if (error) {
             alert('Our piggies are lost! Please try again later.');
-            console.log(error.message);
         };
         if (veggies) {
             return veggies;
@@ -24,7 +23,6 @@ export const getOne = async (recordId) => {
         // error handling
         if (error) {
             alert('Our piggies are lost! Please try again later.');
-            console.log(error.message);
         };
         if (veggies) {
             return veggies;
@@ -36,7 +34,6 @@ export const create = async () => {
 }
 
 export const edit = async (id, data) => {
-    // console.log('data is', data);
     const { res, error } = await supabase
         .from('veggies')
         .update(data)
@@ -45,7 +42,6 @@ export const edit = async (id, data) => {
 
     if (error) {
         alert('Our piggies are lost! Please try again later.');
-        console.log(error.message);
     };
     if (res) {
         return res;

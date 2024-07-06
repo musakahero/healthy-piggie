@@ -1,5 +1,5 @@
 import Select from 'react-select';
-import styles from './Search.module.css'
+import styles from './Search.module.css';
 import piggyImg from './images/Piggy-site.svg';
 export const Search = ({
     setCurrentlySelected,
@@ -11,19 +11,16 @@ export const Search = ({
     const selectStyles = {
         control: (styles, state) => ({
             ...styles,
+            borderColor: `${state.isFocused ? "#red" : "grey"}`,
             textAlign: "center",
             backgroundColor: "var(--bg-search)",
-            minWidth: "23rem",
-            maxWidth: "23rem",
-            height: "4rem",
             borderRadius: "34px",
             border: "none",
-            borderColor: `${state.isFocused ? "#red" : "grey"}`,
             padding: "0 2.5rem 0 1rem",
-            // boxShadow: `${state.isFocused && `0 0 0 1px orange`}`
             boxShadow: "none",
-            cursor: "text"
-
+            cursor: "text",
+            fontSize: "clamp(1.5rem, 3.5vw, 2.5rem)",
+            minHeight: "clamp(3rem, 3.5vw, 5rem)"
         }),
         clearIndicator: (styles, state) => ({
             ...styles,
@@ -43,8 +40,7 @@ export const Search = ({
             ...styles,
             borderRadius: "64px",
             overflow: "hidden",
-            width: "21.5rem",
-            fontSize: "2rem",
+            fontSize: "clamp(1.5rem, 3.5vw, 2.5rem)",
             backgroundColor: "var(--bg-main)"
         }),
         menuList: (styles, state) => ({
@@ -81,7 +77,6 @@ export const Search = ({
             display: state.isFocused && 'none',
         }),
 
-
     }
 
     return (
@@ -104,6 +99,7 @@ export const Search = ({
                     }}
                     noOptionsMessage={() => `Our piggies haven't tasted this food yet :/`}
                 />
+                
                 <div className={styles["bitten"]}></div>
             </div>
             <img src={piggyImg} alt="A Guinea pig drawing" className={styles["piggy-img"]} />

@@ -9,6 +9,9 @@
     padding: 0.5rem 2rem 0.5rem 2rem;
     background-color: var(--accent-main);
     color: var(--font-light-secondary);
+    overflow: auto;
+    /* min-width: 100%; */
+    max-width: 100vw;
 }
 
 .nav .logo-container {
@@ -18,6 +21,7 @@
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+    font-size: clamp(1.5rem, 3.5vw, 2.3rem);
 }
 .nav .logo-container:hover, .nav .nav-items-container .nav-item:hover{
     /* scale: 1.1; */
@@ -29,8 +33,20 @@
     display: flex;
     justify-content: space-between;
     gap: 4rem;
-    font-size: 1.3rem;
+    font-size: clamp(0.9rem, 4vw, 1.3rem);
     /* font-family: "Caveat", cursive; */
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+/* responsive */
+
+@media screen and (max-width: 1024px) {
+    .nav{
+        flex-direction: column;
+    }
+
+    .nav-items-container {
+        text-align: center;
+    }
 }

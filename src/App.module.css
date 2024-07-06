@@ -1,5 +1,5 @@
 .app {
-    /* color vars */
+  /* color vars */
   --accent-main: #124076;
   --bg-main: whitesmoke;
   --bg-search: whitesmoke;
@@ -14,36 +14,47 @@
   --font-light-secondary: #fff59b;
   --bg-option-focused: #fff59b;
   --font-darkmode-btn: #3e5979;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 36px;
-    /* margin: 0 2rem 0 2rem; */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--bg-main);
-}
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  /* margin: 0 2rem 0 2rem; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-main);
+  overflow-x: hidden;
   
+}
+
 .app-main {
-    line-height: 1.5;
-    padding-top: 1rem;
-    min-width: 430px;
+  line-height: 1.5;
+  padding-top: 1rem;
+  /* min-width: 430px; */
+  
 }
 
 .dark-mode {
-    --accent-main: #124076;
-    --bg-main: rgb(19, 18, 18);
-    --bg-secondary: #fff59b;
-    --bg-search: whitesmoke;
-    --bg-option-focused: #3e5979;
-    --font-light: #124076;
-    --font-dark: whitesmoke;
-    --font-search: #124076;
-    --font-search-light: whitesmoke;
-    --bg-high-reco: #39a935;
-    --bg-medium-reco: #f29100;
-    --bg-not-reco: #e20613;
-    --font-light-secondary: #fff59b;
-  }
+  --accent-main: #124076;
+  --bg-main: rgb(19, 18, 18);
+  --bg-secondary: #fff59b;
+  --bg-search: whitesmoke;
+  --bg-option-focused: #3e5979;
+  --font-light: #124076;
+  --font-dark: whitesmoke;
+  --font-search: #124076;
+  --font-search-light: whitesmoke;
+  --bg-high-reco: #39a935;
+  --bg-medium-reco: #f29100;
+  --bg-not-reco: #e20613;
+  --font-light-secondary: #fff59b;
+}
 
+/* Cookie consent */
+.cookie-consent-container {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  background-color: rgba(0, 0, 0, 0.84);
+}
+
+@media screen and (max-width: 485px) {
   
+}
