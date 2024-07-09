@@ -19,8 +19,8 @@
 /* Most searched foods section */
 .pop-questions {
     /* border: 1px solid red; */
-    padding: 3rem 2rem 3rem 3rem;
-    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    padding: 1rem 2rem 1rem 3rem;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
     font-weight: 700;
     background-color: var(--bg-main);
     color: var(--font-dark);

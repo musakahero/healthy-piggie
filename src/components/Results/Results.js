@@ -6,7 +6,8 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 export const Results = ({
     resultItem,
     similarCautionItems,
-    setCurrentlySelected
+    setCurrentlySelected,
+    resultsRef
 }) => {
     const {
         isEdible,
@@ -88,6 +89,7 @@ export const Results = ({
                                                 key={i.id}
                                                 className={styles["search-link"]}
                                                 onClick={() => {
+                                                    resultsRef.current.scrollIntoView()
                                                     setCurrentlySelected(
                                                         {
                                                             value: i.veggieName,
@@ -102,6 +104,7 @@ export const Results = ({
                                                 key={i.id}
                                                 className={styles["search-link"]}
                                                 onClick={() => {
+                                                    resultsRef.current.scrollIntoView();
                                                     setCurrentlySelected(
                                                         {
                                                             value: i.veggieName,

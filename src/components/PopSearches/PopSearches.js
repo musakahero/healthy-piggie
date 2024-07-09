@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styles from './PopSearches.module.css';
 
 
-export const PopSearches = ({ allVeggies, setCurrentlySelected }) => {
+export const PopSearches = ({ allVeggies, setCurrentlySelected, resultsRef }) => {
 
     // Sort and get top 5 searches
     const top5 = allVeggies.sort((a, b) => b.searchCount - a.searchCount)
@@ -12,17 +12,20 @@ export const PopSearches = ({ allVeggies, setCurrentlySelected }) => {
         <ul className={styles["top-searches"]}> Most popular searches:
             {top5.map(i =>
                 <li key={i.id}>
-                    <Link className={styles['search-link']} 
-                    onClick={() => {
-                        setCurrentlySelected(
-                            {
-                                value: i.veggieName,
-                                label: i.veggieName,
-                                id: i.id,
-                                searchCount: i.searchCount
-                            });
+                    <Link className={styles['search-link']}
+                        to={"/#results"}
+                        onClick={() => {
+                            resultsRef.current.scrollIntoView();
+                            setTimeout(() => { }, 5000);
+                            setCurrentlySelected(
+                                {
+                                    value: i.veggieName,
+                                    label: i.veggieName,
+                                    id: i.id,
+                                    searchCount: i.searchCount
+                                });
 
-                    }}>Can my piggie eat {`${i.veggieName}`}?</Link>
+                        }}>Can my piggie eat {`${i.veggieName}`}?</Link>
                 </li>
             )}
         </ul>

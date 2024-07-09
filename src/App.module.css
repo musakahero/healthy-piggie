@@ -1,13 +1,15 @@
 .app {
   /* color vars */
+  /* --white: rgb(240, 238, 238); */
+  --white: whitesmoke;
   --accent-main: #124076;
-  --bg-main: whitesmoke;
-  --bg-search: whitesmoke;
+  --bg-main: var(--white);
+  --bg-search: var(--white);
   --bg-secondary: #fff59b;
   --font-dark: #124076;
-  --font-light: whitesmoke;
+  --font-light: var(--white);
   --font-search: #124076;
-  --font-search-light: whitesmoke;
+  --font-search-light: var(--white);
   --bg-high-reco: #39a935;
   --bg-medium-reco: #f29100;
   --bg-not-reco: #e20613;
@@ -35,14 +37,15 @@
 
 .dark-mode {
   --accent-main: #124076;
-  --bg-main: rgb(19, 18, 18);
+  /* --bg-main: rgb(19, 18, 18); */
+  --bg-main: #1e1e1f;
   --bg-secondary: #fff59b;
-  --bg-search: whitesmoke;
+  --bg-search: var(--white);
   --bg-option-focused: #3e5979;
   --font-light: #124076;
-  --font-dark: whitesmoke;
+  --font-dark: var(--white);
   --font-search: #124076;
-  --font-search-light: whitesmoke;
+  --font-search-light: var(--white);
   --bg-high-reco: #39a935;
   --bg-medium-reco: #f29100;
   --bg-not-reco: #e20613;

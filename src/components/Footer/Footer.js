@@ -1,32 +1,5 @@
-// import { useState } from 'react';
-// import styles from './Footer.module.css';
-// import { Link } from 'react-router-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faMoon as faMoonSolid, faSun } from '@fortawesome/free-solid-svg-icons';
-
-
-// export const Footer = () => {
-//     // Darkmode state
-//     const [darkmode, setDarkmode] = useState(false);
-
-//     return (
-//         <>
-//             <ul className={styles.container}>
-//                 <li>Contacts</li>
-//                 <li>Sources</li>
-//                 <li>Sources</li>
-//                 <li>Sources</li>
-//                 <li>Sources</li>
-//             </ul>
-//             <div className={styles.copyright}><span>MusakaSoft &copy; 2024</span></div>
-//         </>
-
-//     )
-// }
-
 import styles from './Footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { faSun } from '@fortawesome/free-regular-svg-icons';
 import { faMoon as faMoonSolid } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -57,7 +30,9 @@ export const Footer = ({ darkmode,
             <button
                 className={styles['darkmode-btn']}
                 type="button"
-                onClick={() => setDarkmode(!darkmode)}>
+                onClick={() => {
+                        setDarkmode(!darkmode);
+                    }}>
                 <Link><FontAwesomeIcon icon={darkmode ? faSun : faMoonSolid} /></Link>
                 <span className={styles["tooltiptext"]}>
                     {!darkmode ? "Dark mode" : "Light mode"}

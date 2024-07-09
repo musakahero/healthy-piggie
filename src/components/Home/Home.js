@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Results } from '../Results/Results';
 import styles from './Home.module.css';
 import * as veggiesService from '../../services/veggiesServiceSupabase';
@@ -10,6 +10,7 @@ import { Loading } from '../Loading/Loading';
 export const Home = (props) => {
     const [allVeggies, setAllVeggies] = useState([]);
     const [showLoading, setShowLoading] = useState(false);
+    const resultsRef = useRef(null);
 
     //Search functionality (useSearch custom hook)
     const { options,
@@ -41,15 +42,19 @@ export const Home = (props) => {
                         currentlySelected={currentlySelected} />
 
                     {/* //Results section */}
-                    <section className={styles.results}>
+                    <section className={styles.results} ref={resultsRef}>
                         {/* //Show results section only if foundItem is not falsey */}
-                        {resultItem && <Results resultItem={resultItem} similarCautionItems={similarCautionItems}
-                        setCurrentlySelected={setCurrentlySelected} />}
+                        {resultItem && <Results 
+                        resultItem={resultItem} 
+                        similarCautionItems={similarCautionItems}
+                        setCurrentlySelected={setCurrentlySelected}
+                        resultsRef = {resultsRef} />}
                     </section>
                     {/* // Most popular searches section */}
                     <section className={styles["pop-questions"]}>
                         <PopSearches allVeggies={allVeggies}
                             setCurrentlySelected={setCurrentlySelected}
+                            resultsRef = {resultsRef}
                         />
                     </section>
                 </>}

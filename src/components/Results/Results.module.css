@@ -42,9 +42,9 @@
     color: var(--font-dark);
 }
 
-.column-card:last-child {
-    padding-bottom: 1rem;
-}
+/* .column-card:last-child {
+    padding-bottom: 1.5rem;
+} */
 
 .column-card.isEdible {
     font-weight: bolder;
@@ -122,7 +122,6 @@ h3 {
     /* coloring */
     background-color: var(--bg-medium-reco);
     color: var(--font-light);
-
 }
 
 .info-icon {
@@ -217,8 +216,19 @@ h3 {
     .container-no {
         padding: 2rem 1.5rem;
     }
+
     .source {
         /* font-size: 0.7rem; */
+    }
+
+    .container-yellow .caution-badge {
+        /* prevent select */
+        -webkit-user-select: none;
+        /* Safari */
+        -ms-user-select: none;
+        /* IE 10 and IE 11 */
+        user-select: none;
+        /* Standard syntax */
     }
 }
 
@@ -230,9 +240,11 @@ h3 {
         /* font-size: 0.9rem; */
         padding: 0;
     }
+
     .container-yellow .caution-badge {
         flex-direction: column;
     }
+
     .tooltipText {
         /* padding: 0; */
         /* left: 30%; */

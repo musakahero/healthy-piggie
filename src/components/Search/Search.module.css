@@ -11,7 +11,8 @@
     max-width: 0;
     margin: 5rem auto 1.5rem auto;
     border-radius: 64px;
-    box-shadow: 3px 5px 5px 0px rgb(75, 44, 44);
+    /* box-shadow: 3px 5px 5px 0px rgb(143, 143, 143); */
+    box-shadow: 3px 5px 5px 0px rgb(0, 0, 0);
     background-image: url("./images/Yellow-rectangle-site-01.jpg");
     background-size: cover;
     background-repeat: no-repeat;
