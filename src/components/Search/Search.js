@@ -7,7 +7,7 @@ export const Search = ({
     currentlySelected
 }) => {
 
-    // Styling react-select
+    // Styling react-select - styles object
     const selectStyles = {
         control: (styles, state) => ({
             ...styles,
@@ -99,7 +99,6 @@ export const Search = ({
                     }}
                     noOptionsMessage={() => `Our piggies haven't tasted this food yet :/`}
                 />
-                
                 <div className={styles["bitten"]}></div>
             </div>
             <img src={piggyImg} alt="A Guinea pig drawing" className={styles["piggy-img"]} />

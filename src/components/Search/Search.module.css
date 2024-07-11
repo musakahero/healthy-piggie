@@ -11,14 +11,11 @@
     max-width: 0;
     margin: 5rem auto 1.5rem auto;
     border-radius: 64px;
-    /* box-shadow: 3px 5px 5px 0px rgb(143, 143, 143); */
     box-shadow: 3px 5px 5px 0px rgb(0, 0, 0);
     background-image: url("./images/Yellow-rectangle-site-01.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     font-weight: 700;
-    /* overflow: auto; */
-
 }
 
 .container .piggy-img {
@@ -31,7 +28,6 @@
 .container .bitten {
     width: min(5rem, 25%);
     height: 100%;
-    /* max-height: 100%; */
     position: absolute;
     right: 0rem;
     background-image: url(./images/Search-site-01.svg);
@@ -39,20 +35,15 @@
     background-position: center;
     border-top-right-radius: 64px;
     border-bottom-right-radius: 64px;
-
 }
 
 .container .heading {
     font-size: 3.5rem;
     font-weight: 700;
-    /* border: 1px solid red; */
-
 }
 
 .container .sub-heading {
     font-size: 1rem;
-    /* border: 1px solid green; */
-
     margin-bottom: 1.5rem;
     font-weight: 400;
 }
@@ -62,7 +53,6 @@
     display: flex;
     box-shadow: -1px 11px 5px -8px grey;
     border-radius: 64px;
-    /* width: 26rem; */
     width: 60%;
     min-height: 3rem;
 }
@@ -74,7 +64,7 @@
     height: 100%;
 }
 
-/* responsiveness */
+/* responsive */
 @media screen and (max-width: 1024px) {
     .container {
         min-width: 40rem;
@@ -137,7 +127,5 @@
     }
     .container .select-container {
         width: 100%;
-    }
-    .container .react-select-component {
     }
 }

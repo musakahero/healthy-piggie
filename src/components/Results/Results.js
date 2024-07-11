@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import styles from './Results.module.css'
+import { Link } from 'react-router-dom';
+import styles from './Results.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,8 +8,7 @@ export const Results = ({
     similarCautionItems,
     searchChangeHandler
 }) => {
-    const {
-        isEdible,
+    const { isEdible,
         recommendation,
         recommendationNotes,
         veggieName,
@@ -44,18 +43,16 @@ export const Results = ({
                 {/* if Edible & Medium reco show warning column card */}
                 {isEdible && recommendation === "Medium" &&
                     <div className={`${styles["caution-badge"]}`}>
-                        {
-                            caution.map((c, index) =>
-                                <div key={index} className={styles['caution-item']}>
-                                    {c} {
-                                        <FontAwesomeIcon
-                                            icon={faInfoCircle}
-                                            className={styles['info-icon']} />}
-                                    <div className={styles['tooltipText']}>{cautionTypes[c]}</div>
-                                </div>)}
+                        {caution.map((c, index) =>
+                            <div key={index} className={styles['caution-item']}>
+                                {c} {<FontAwesomeIcon
+                                    icon={faInfoCircle}
+                                    className={styles['info-icon']} />}
+                                <div className={styles['tooltipText']}>{cautionTypes[c]}</div>
+                            </div>)
+                        }
                     </div>
                 }
-
                 {/* if Edible show this column card */}
                 {isEdible && <div className={styles["column-card"]}>
                     <h3>What should I keep in mind when I give <span className={styles.veggieName}>{veggieName}</span> to my guinea pig?</h3>
@@ -80,34 +77,19 @@ export const Results = ({
                         <div>
                             <div>Does not pair well with {
                                 // Map items to Link components
-                                similarCautionItems.map(
-                                    (i, index) => {
-                                        // Add punctuation accordingly
-                                        if (similarCautionItems.length - 1 !== index) {
-                                            return (
-                                                <div key={i.id} className={styles['search-item']}>
-                                                    <Link
-                                                        className={styles["search-link"]}
-                                                        onClick={() => searchChangeHandler(i)
-                                                        }
-                                                    >{i.veggieName}, 
-                                                    </Link>
-                                                    <div className={styles['tooltipText']}>{i.caution.join(`, `)}</div>
-                                                </div>
-                                            )
-                                        } else {
-                                            return (
-                                                <div key={i.id} className={styles['search-item']}>
-                                                    <Link
-                                                        key={i.id}
-                                                        className={styles["search-link"]}
-                                                        onClick={() => searchChangeHandler(i)}
-                                                    > {i.veggieName}.</Link>
-                                                    <div className={styles['tooltipText']}>{i.caution.join(`, `)}</div>
-                                                </div>
-                                            )
-                                        }
-                                    })}
+                                similarCautionItems.map((i, index) =>
+                                    <div
+                                        key={i.id}
+                                        className={styles['search-item']}>
+                                        <Link
+                                            className={styles["search-link"]}
+                                            onClick={() => searchChangeHandler(i)}>
+                                            {/* Add punctuation accordingly */}
+                                            {similarCautionItems.length - 1 !== index ? i.veggieName + ',' : i.veggieName + '.'}
+                                        </Link>
+                                        <div className={styles['tooltipText']}>{i.caution.join(`, `)}</div>
+                                    </div>)
+                            }
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,8 @@
-export const compareItems = (resItem, arrayOfItems, foodTypeToCheckAgainst) => {
+// The function takes the searched item and compares it to all foods (arrayOfItems) by the food type provided (foodTypeToCheck). 
+export const compareItems = (resItem, arrayOfItems, foodTypeToCheck) => {
 
     let similarItems = [];
-    let filteredByType = arrayOfItems.filter(i => i.foodType === foodTypeToCheckAgainst);
+    let filteredByType = arrayOfItems.filter(i => i.foodType === foodTypeToCheck);
 
     for (const item of filteredByType) {
         for (const cautionFactor of resItem.caution) {
@@ -10,9 +11,6 @@ export const compareItems = (resItem, arrayOfItems, foodTypeToCheckAgainst) => {
             }
         }
     }
-    let uniqueItems = similarItems.filter((value, index, array) => array.indexOf(value) === index);
-
-    return uniqueItems;
-
+    return [...new Set(similarItems)];
 }
 

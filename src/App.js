@@ -8,7 +8,6 @@ import { faWheatAwnCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 import { NotFound } from './components/NotFound/NotFound';
 import CookieConsent /*{ Cookies }*/ from "react-cookie-consent";
 import useLocalStorage from 'use-local-storage';
-import { Results } from './components/Results/Results';
 
 function App() {
   // Darkmode
