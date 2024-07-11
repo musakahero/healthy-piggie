@@ -19,25 +19,20 @@
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 36px;
-  /* margin: 0 2rem 0 2rem; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: var(--bg-main);
   overflow-x: hidden;
-  
 }
 
 .app-main {
   line-height: 1.5;
   padding-top: 1rem;
-  /* min-width: 430px; */
-  
 }
 
 .dark-mode {
   --accent-main: #124076;
-  /* --bg-main: rgb(19, 18, 18); */
   --bg-main: #1e1e1f;
   --bg-secondary: #fff59b;
   --bg-search: var(--white);
@@ -54,10 +49,30 @@
 
 /* Cookie consent */
 .cookie-consent-container {
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.84);
+  overflow-x: hidden;
 }
 
-@media screen and (max-width: 485px) {
-  
+.cookie-consent-container .content {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+/* Due to built-in styling having higher specificity for the button styles, I'm using !important to override those. This is required only for the button style classes. */
+.accept-btn {
+  background-color: var(--bg-secondary) !important;
+  color: var(--accent-main) !important;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 500;
+  border-radius: 64px !important;
+  padding: 0.5rem 1rem !important;
+}
+
+.decline-btn {
+  background-color: var(--white) !important;
+  color: var(--accent-main) !important;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 500;
+  border-radius: 64px !important;
+  padding: 0.5rem 1rem !important;
 }

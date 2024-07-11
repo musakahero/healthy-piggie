@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import * as veggieService from '../services/veggiesServiceSupabase';
 import { compareItems } from '../utils/compareItems';
+
 export const useSearch = (array) => {
     const [currentlySelected, setCurrentlySelected] = useState(null);
     const [resultItem, setResultItem] = useState(null);
@@ -15,31 +16,26 @@ export const useSearch = (array) => {
                     const resItem = res[0]; //for Supabase
 
                     // update the searchCount in DB for the specific item
-                    oldCount = resItem.searchCount; //for Supabase 
-                    // oldCount = res.searchCount; //for Pocketbase 
+                    oldCount = resItem.searchCount;
 
                     veggieService.edit(currentlySelected.id, { searchCount: oldCount + 1 })
                         .catch(err => alert(err));
 
-                    // set resultItem to pass on to Results component (Both options available for Pocketbase return and Supabase return)
-                    if (Array.isArray(res)) {
-                        setResultItem(resItem); //for Pocketbase
-                    } else {
-                        setResultItem(res); //for Supabase
-                    }
+                    // set resultItem to pass on to Results component
+                    setResultItem(resItem);
 
                     // Get similar items based on caution if item is Medium & Fruit
                     if (resItem.foodType === 'Fruit' && resItem.recommendation === 'Medium') {
                         setSimilarCautionItems(compareItems(resItem, array, 'Vegetable'));
 
                         //Get similar items based on caution if item is Medium & Vegetable
-                    } else if (resItem.foodType === 'Vegetable' && resItem.recommendation === 'Medium'){
+                    } else if (resItem.foodType === 'Vegetable' && resItem.recommendation === 'Medium') {
                         setSimilarCautionItems(compareItems(resItem, array, 'Fruit'));
                     }
                 })
                 .catch(err => alert(err));
         };
-    }, [currentlySelected]);
+    }, [currentlySelected, array]);
 
     // create options object to pass to react-select as "options" prop
     const options = [

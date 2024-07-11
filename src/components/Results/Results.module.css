@@ -1,6 +1,21 @@
 /* Shared styles */
+.search-item {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    margin: 0 clamp(0.07rem,1vw,0.15rem) 0 clamp(0.07rem,1vw,0.15rem);
+    /* prevent select */
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+.search-item:hover .tooltipText {
+    visibility: visible;
+}
 .search-link:hover {
-    /* border-bottom: 2px solid var(--font-dark); */
     color: var(--bg-medium-reco);
 }
 
@@ -21,7 +36,6 @@
     margin: auto;
     max-width: 80vw;
     min-width: 20rem;
-    /* font-size: 1.4rem; */
     font-size: clamp(0.9rem, 2.5vw, 1.4rem);
     padding: 2rem 4rem;
     display: flex;
@@ -41,11 +55,6 @@
     /* coloring */
     color: var(--font-dark);
 }
-
-/* .column-card:last-child {
-    padding-bottom: 1.5rem;
-} */
-
 .column-card.isEdible {
     font-weight: bolder;
     margin: auto;
@@ -83,7 +92,6 @@ h3 {
 
 .container-green .source {
     background-color: var(--bg-high-reco);
-    /* color: var(--font-light); */
     border: 2px solid var(--bg-high-reco);
 
 }
@@ -119,7 +127,6 @@ h3 {
     border-radius: 64px;
     font-weight: 600;
     font-size: clamp(0.7rem, 2.5vw, 1.2rem);
-    /* coloring */
     background-color: var(--bg-medium-reco);
     color: var(--font-light);
 }
@@ -151,8 +158,6 @@ h3 {
     position: absolute;
     z-index: 1;
     left: 100%;
-
-
 }
 
 .caution-item:hover .tooltipText {
@@ -161,7 +166,6 @@ h3 {
 
 .container-yellow .source {
     background-color: var(--bg-medium-reco);
-    /* color: var(--font-light); */
     border: 2px solid var(--bg-medium-reco);
 }
 
@@ -186,7 +190,6 @@ h3 {
 
 .container-no .source {
     background-color: var(--bg-not-reco);
-    /* color: var(--font-light); */
     border: 2px solid var(--bg-not-reco);
 }
 
@@ -210,15 +213,10 @@ h3 {
 }
 
 @media screen and (max-width: 768px) {
-
     .container-green,
     .container-yellow,
     .container-no {
         padding: 2rem 1.5rem;
-    }
-
-    .source {
-        /* font-size: 0.7rem; */
     }
 
     .container-yellow .caution-badge {
@@ -233,11 +231,9 @@ h3 {
 }
 
 @media screen and (max-width: 425px) {
-
     .container-green,
     .container-yellow,
     .container-no {
-        /* font-size: 0.9rem; */
         padding: 0;
     }
 
@@ -246,8 +242,6 @@ h3 {
     }
 
     .tooltipText {
-        /* padding: 0; */
-        /* left: 30%; */
-
+        left:-50%;
     }
 }

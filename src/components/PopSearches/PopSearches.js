@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 import styles from './PopSearches.module.css';
 
+export const PopSearches = ({ allVeggies, searchChangeHandler }) => {
 
-export const PopSearches = ({ allVeggies, setCurrentlySelected, resultsRef }) => {
-
-    // Sort and get top 5 searches
+    // Sort all food by searchCount descending and get top 5 food searches 
     const top5 = allVeggies.sort((a, b) => b.searchCount - a.searchCount)
         .slice(0, 5);
 
@@ -14,18 +13,7 @@ export const PopSearches = ({ allVeggies, setCurrentlySelected, resultsRef }) =>
                 <li key={i.id}>
                     <Link className={styles['search-link']}
                         to={"/#results"}
-                        onClick={() => {
-                            resultsRef.current.scrollIntoView();
-                            setTimeout(() => { }, 5000);
-                            setCurrentlySelected(
-                                {
-                                    value: i.veggieName,
-                                    label: i.veggieName,
-                                    id: i.id,
-                                    searchCount: i.searchCount
-                                });
-
-                        }}>Can my piggie eat {`${i.veggieName}`}?</Link>
+                        onClick={() => searchChangeHandler(i)}>Can my piggie eat {`${i.veggieName}`}?</Link>
                 </li>
             )}
         </ul>

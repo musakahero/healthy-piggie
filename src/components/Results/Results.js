@@ -6,8 +6,7 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 export const Results = ({
     resultItem,
     similarCautionItems,
-    setCurrentlySelected,
-    resultsRef
+    searchChangeHandler
 }) => {
     const {
         isEdible,
@@ -79,44 +78,37 @@ export const Results = ({
                     <div className={styles["column-card"]}>
                         {foodType === "Fruit" && <p>Does not pair well with other fruits.</p>}
                         <div>
-                            <p>Does not pair well with {
+                            <div>Does not pair well with {
                                 // Map items to Link components
                                 similarCautionItems.map(
                                     (i, index) => {
                                         // Add punctuation accordingly
                                         if (similarCautionItems.length - 1 !== index) {
-                                            return <Link
-                                                key={i.id}
-                                                className={styles["search-link"]}
-                                                onClick={() => {
-                                                    resultsRef.current.scrollIntoView()
-                                                    setCurrentlySelected(
-                                                        {
-                                                            value: i.veggieName,
-                                                            label: i.veggieName,
-                                                            id: i.id,
-                                                            searchCount: i.searchCount
-                                                        });
-                                                }}
-                                            > {i.veggieName},</Link>
+                                            return (
+                                                <div key={i.id} className={styles['search-item']}>
+                                                    <Link
+                                                        className={styles["search-link"]}
+                                                        onClick={() => searchChangeHandler(i)
+                                                        }
+                                                    >{i.veggieName}, 
+                                                    </Link>
+                                                    <div className={styles['tooltipText']}>{i.caution.join(`, `)}</div>
+                                                </div>
+                                            )
                                         } else {
-                                            return <Link
-                                                key={i.id}
-                                                className={styles["search-link"]}
-                                                onClick={() => {
-                                                    resultsRef.current.scrollIntoView();
-                                                    setCurrentlySelected(
-                                                        {
-                                                            value: i.veggieName,
-                                                            label: i.veggieName,
-                                                            id: i.id,
-                                                            searchCount: i.searchCount
-                                                        });
-                                                }}
-                                            > {i.veggieName}.</Link>
+                                            return (
+                                                <div key={i.id} className={styles['search-item']}>
+                                                    <Link
+                                                        key={i.id}
+                                                        className={styles["search-link"]}
+                                                        onClick={() => searchChangeHandler(i)}
+                                                    > {i.veggieName}.</Link>
+                                                    <div className={styles['tooltipText']}>{i.caution.join(`, `)}</div>
+                                                </div>
+                                            )
                                         }
                                     })}
-                            </p>
+                            </div>
                         </div>
                     </div>
                 }
@@ -124,3 +116,34 @@ export const Results = ({
         </>
     )
 }
+
+
+/*Idea one: tooltips
+// Add punctuation accordingly
+    if (similarCautionItems.length - 1 !== index) {
+        return (
+            <div key={i.id} className={styles['search-item']}>
+                <Link
+                    className={styles["search-link"]}
+                    onClick={() => searchChangeHandler(i)
+                    }
+                > {i.veggieName},
+                </Link>
+                <div className={styles['tooltipText']}>{'tooltiptest'}</div>
+            </div>
+        )
+    } else {
+        return (
+            <div key={i.id} className={styles['search-item']}>
+                <Link
+                    key={i.id}
+                    className={styles["search-link"]}
+                    onClick={() => searchChangeHandler(i)}
+                > {i.veggieName}.</Link>
+                <div className={styles['tooltipText']}>{'tooltiptest'}</div>
+            </div>
+        )
+    }
+*/
+
+/*Idea two:  */

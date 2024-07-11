@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     min-height: 65vh;
-    
 }
 
 /* Intro section */
@@ -13,12 +12,10 @@
     font-size: 1.8rem;
     padding: 3rem 5rem 3rem 5rem;
     color: black;
-
 }
 
 /* Most searched foods section */
-.pop-questions {
-    /* border: 1px solid red; */
+.pop-searches {
     padding: 1rem 2rem 1rem 3rem;
     font-size: clamp(1.5rem, 3.5vw, 2rem);
     font-weight: 700;
@@ -26,13 +23,12 @@
     color: var(--font-dark);
     font-family: Caveat, Arial, Helvetica, sans-serif;
 }
-.pop-questions li {
+.pop-searches li {
     list-style-type: circle;
     font-style: italic;
 }
 
-.pop-questions li:hover a{
-    /* color: var(--font-light); */
+.pop-searches li:hover a{
     border-bottom: 2px solid var(--font-dark);
 }
 
@@ -45,5 +41,4 @@
     .results {
         padding: 0;
     }
-
 }

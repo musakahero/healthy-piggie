@@ -1,7 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap'); */
-
 .nav {
-    /* border: 1px solid green; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,7 +7,6 @@
     background-color: var(--accent-main);
     color: var(--font-light-secondary);
     overflow: auto;
-    /* min-width: 100%; */
     max-width: 100vw;
 }
 
@@ -24,23 +20,19 @@
     font-size: clamp(1.5rem, 3.5vw, 2.3rem);
 }
 .nav .logo-container:hover, .nav .nav-items-container .nav-item:hover{
-    /* scale: 1.1; */
     transition-duration: 0.2s;
     font-weight: 600;
 }
 .nav-items-container {
-    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     gap: 4rem;
     font-size: clamp(0.9rem, 4vw, 1.3rem);
-    /* font-family: "Caveat", cursive; */
     font-optical-sizing: auto;
     font-style: normal;
 }
 
 /* responsive */
-
 @media screen and (max-width: 1024px) {
     .nav{
         flex-direction: column;
