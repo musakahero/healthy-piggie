@@ -1,5 +1,33 @@
-# Getting Started with Create React App
+# mypiggyeats.com - Check if your guinea pig can eat certain foods
 
+## The issue
+As a guinea pig owner, it is tough to find information about the foods your piggie can or cannot eat in one place. There is a fair amount of foods that are toxic to them or should be provided in lower quantity.  
+
+## The solution
+To solve this issue, we created this simple search tool, where you can look up any types of food (vegetables, fruits, nuts etc.) and you'll receive all the important information, with first and foremost answering the question **"Can your guinea pig eat that?"**. The idea for the app is to be as straightforward as possible - least clicks possible, most important information provided and as accurate as possible. 
+
+## Features
+- Lightweight Web UI with self-explanatory color-coding, responsive on most display sizes
+- Straightforward Search bar with autocomplete, no additional clicks required
+- Answers on a few core questions:
+  - Can my guinea pig eat X food?
+  - What should I keep in mind when I give X to my guinea pig?
+  - How much X should I give my guinea pig per day?
+  - If X should be given with caution, which are the other foods that we should not combine it with?
+- Caution badges - if the food should be provided with caution (orange-colored result box) - a badge will be displayed containing the specific issue of that food. Hovering over the badge will expand on that, via a tooltip
+- Source badges - for every dietary tip given under the **"How much food should I give"** section, there is a **"Source"** link, so that you can reference the source if you wish to fact-check or get more information about it
+- Most popular searches - this section keeps track of the most searched foods on our app
+- Dark mode - simply click the switch to turn off the lights B)
+
+## Tech stack
+- HTML5/CSS3/JS
+- ReactJS (create-react-app)
+- Supabase ([PostgreSQL database](https://supabase.com/))
+
+## Disclaimer
+The content provided on **mypiggyeats.com is** for informational purposes only and is not intended to be a substitute for professional veterinary advice, diagnosis, or treatment. Always seek the advice of a qualified veterinarian.
+
+# Additional information on the project build
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -39,32 +67,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
