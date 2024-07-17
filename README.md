@@ -4,7 +4,7 @@
 As a guinea pig owner, it is tough to find information about the foods your piggie can or cannot eat in one place. There is a fair amount of foods that are toxic to them or should be provided in lower quantity.  
 
 ## The solution
-To solve this issue, we created this simple search tool, where you can look up any types of food (vegetables, fruits, nuts etc.) and you'll receive all the important information, with first and foremost answering the question **"Can your guinea pig eat that?"**. The idea for the app is to be as straightforward as possible - least clicks possible, most important information provided and as accurate as possible. 
+We created this simple search tool, where you can look up any types of food (vegetables, fruits, nuts etc.) and you'll receive all the important information, with first and foremost answering the question **"Can your guinea pig eat that?"**. The idea for the app is to be as straightforward as possible - least clicks possible, most important information provided and as accurate as possible. 
 
 ## Features
 - Lightweight Web UI with self-explanatory color-coding, responsive on most display sizes
