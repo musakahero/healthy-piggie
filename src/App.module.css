@@ -48,8 +48,10 @@
 }
 
 /* Cookie consent */
+/* Due to built-in styling having higher specificity for the banner styles, I'm using !important to override those. */
 .cookie-consent-container {
-  align-items: center;
+  align-items: center !important;
+  justify-content: center !important;
   background-color: rgba(0, 0, 0, 0.84);
   overflow-x: hidden;
 }
@@ -58,7 +60,9 @@
   font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
-/* Due to built-in styling having higher specificity for the button styles, I'm using !important to override those. This is required only for the button style classes. */
+.wrapper {
+  align-self: center !important;
+}
 .accept-btn {
   background-color: var(--bg-secondary) !important;
   color: var(--accent-main) !important;

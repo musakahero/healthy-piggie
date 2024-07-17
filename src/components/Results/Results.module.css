@@ -241,7 +241,8 @@ h3 {
         flex-direction: column;
     }
 
-    .tooltipText {
+    .search-item .tooltipText {
         left:-50%;
+        border-top-left-radius: 16px;
     }
 }
