@@ -39,7 +39,7 @@ export const Footer = ({ darkmode,
                 </span>
             </button>
         </div>
-        <div className={styles.copyright}><span>MusakaSoft &copy; 2024</span></div>
+        <div className={styles.copyright}><span>ruschev.dev &copy; 2024</span></div>
     </>
     )
 }
